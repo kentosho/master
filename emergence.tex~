@@ -1,0 +1,3 @@
+%#!platex master.tex
+
+$\ref{introduction}$でも述べた通り、弦理論では様々な側面に非可換幾何的な性質が現われる。

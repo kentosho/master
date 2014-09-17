@@ -1,0 +1,149 @@
+%#!platex master.tex
+% Packages used
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsxtra}
+\usepackage{mathrsfs}
+\usepackage[all]{xypic}
+\usepackage{enumerate}
+
+% \CompileMatrices
+% Define theorem environment
+\newtheoremstyle{mythmsty}{3pt}{3pt}{\upshape}{}{\upshape\bfseries}{}{\newline}{}
+\theoremstyle{mythmsty}
+\renewcommand{\proofname}{{\bfseries 証明}}
+\newtheorem{The}{定理}[section]
+\newtheorem{Def}[The]{定義}
+\newtheorem{Lem}[The]{補題}
+\newtheorem{Cor}[The]{系}
+\newtheorem{Conj}[The]{仮説}
+
+%make upshape default
+\upshape
+
+% Some outlooks
+\setlength{\textwidth}{150mm}
+% for jbook
+\renewcommand{\bibname}{参考文献}
+\setlength{\evensidemargin}{-3mm}
+\setlength{\oddsidemargin}{7mm}
+% for jreport
+%\setlength{\evensidemargin}{5mm}
+%\setlength{\oddsidemargin}{5mm}
+
+%Some abbreviations
+\def\sla#1{\rlap{\kern .15em /}#1}
+\def\bra#1{\langle #1 |}
+\def\ket#1{| #1 \rangle}
+\def\ten{\textperiodcentered}
+
+\def\vl{\vec{l}}
+\def\vk{\vec{k}}
+\def\vp{\vec{p}}
+\def\ap{{\alpha'}}
+\def\ls{{\ell_{\mathrm{s}}}}
+\def\Ud{U^\dagger{}}
+\def\Kt{\tilde{K}}
+\def\Cst{\mathrm{C}^*{}}
+\def\Cinf{\mathrm{C}^\infty}
+\def\crea{a^\dagger{}}
+\def\anih{a}
+\def\creC{{C^\dagger}}
+\def\aniC{{C}}
+\def\Sd{{S^\dagger}}
+\def\kbar{{\mathchar'26\mkern-9muk}}
+
+\def\ihalf{{i\over2}}
+\def\1half{{1\over2}}
+\def\der{\partial}
+
+\def\Ah{\hat{A}}
+\def\Dh{\hat{D}}
+\def\Fh{\hat{F}}
+\def\ph{\hat{p}}
+\def\qh{\hat{q}}
+\def\xh{\hat{x}}
+\def\yh{\hat{y}}
+\def\delh{{\hat{\delta}}}
+\def\lamh{{\hat{\lambda}}}
+\def\theh{{\hat{\theta}}}
+
+\def\At{\tilde{A}}
+\def\Dt{\tilde{D}}
+\def\Ft{\tilde{F}}
+\def\delt{{\tilde{\delta}}}
+\def\lamt{{\tilde{\lambda}}}
+\def\thet{{\tilde{\theta}}}
+\def\rht{{\tilde{\rho}}}
+\def\zb{\bar{z}}
+\def\Ab{\bar{A}}
+\def\Tb{\Bar{T}}
+\def\derb{\bar{\partial}}
+\def\zero{\mathbf{0}}
+\def\E{\mathrm{e}}
+
+\def\Ad{\mathrm{Ad}}
+\def\Aut{\mathrm{Aut}}
+\def\Arg{\mathrm{Arg}}
+\def\CoD{\mathrm{cod}\,}
+\def\Diag{\mathrm{diag}}
+\def\Dim{\mathrm{dim}}
+\def\Dom{\mathrm{dom}\,}
+\def\End{\mathrm{End}}
+\def\Ext{\mathrm{\mathbf{Ext}}}
+\def\GL{\mathrm{GL}}
+\def\Ham{\mathrm{H}}
+\def\Hom{\mathrm{Hom}}
+\def\Ker{\mathrm{Ker}}
+\def\id{\mathrm{id}}
+\def\Img{\mathrm{Im}}
+\def\Ind{\mathrm{Index}}
+\def\n{\mathrm{n}}
+\def\Ob{\mathrm{Ob}}
+\def\Rank{\mathrm{Rank}}
+\def\Tr{\mathrm{Tr}}
+\def\Vect{\mathrm{Vect}}
+
+
+\def\bx{\mathbf{x}}
+\def\AlgA{\mathcal{A}}
+\def\AlgAk{{\mathcal{A}_\kbar}}
+\def\AlgB{\mathcal{B}}
+\def\AlgC{\mathcal{C}}
+\def\AlgJ{\mathcal{J}}
+\def\AlgK{\mathcal{K}}
+\def\CatA{\mathscr{A}}
+\def\CatB{\mathscr{B}}
+\def\CatC{\mathscr{C}}
+\def\ModM{\mathcal{M}}
+\def\ModN{\mathcal{N}}
+\def\ModE{\mathcal{E}}
+\def\ModF{\mathcal{F}}
+\def\Mat{\mathrm{Mat}}
+\def\MatK{\mathbb{K}}
+\def\Mtrx{\mathbb{M}}
+\def\Minf{{\mathbb{M}_\infty}}
+\def\OpO{\mathcal{O}}
+\def\Toep{\mathcal{T}}
+\def\Spi{\mathcal{S}}
+
+\def\Real{\mathbb{R}}
+\def\Cplx{\mathbb{C}}
+\def\Rtnl{\mathbb{Q}}
+\def\Hil{\mathscr{H}}
+\def\Intg{\mathbb{Z}}
+\def\Ntrl{\mathbb{N}}
+\def\Ord{\mathcal{O}}
+\def\Trvn{\mathfrak{n}}
+\def\Trvm{\mathfrak{m}}
+
+
+\def\AntiSymBlock#1{
+\begin{matrix}
+ 0   & #1 \\
+ -#1 & 0  \\
+\end{matrix}}

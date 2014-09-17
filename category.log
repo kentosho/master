@@ -1,0 +1,25 @@
+This is pTeX, Version p2.1.5, based on TeX, Version 3.14159 (EUC) (Web2c 7.0) (format=jlplain 97.8.31)  23 NOV 2000 20:13
+**/home/kent/tmp/master/category.tex
+(/home/kent/tmp/master/category.tex
+LaTeX Version 2.09 <24 May 1989>
+\citation{IwaKiHom2}
+LaTeX error.  See LaTeX manual for explanation.
+              Type  H <return>  for immediate help.
+! Missing \begin{document}.
+\@latexerr ...for immediate help.}\errmessage {#1}
+                                                  
+...
+l.3 こ
+      こでは非可換幾何を数学的に議論する為に重要になる圏の概念について説明す...
+
+? x
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 11797
+ 100 string characters out of 86694
+ 25685 words of memory out of 263001
+ 2076 multiletter control sequences out of 10000+0
+ 23946 words of font info for 90 fonts, out of 100000 for 500
+ 14 hyphenation exceptions out of 1000
+ 7i,0n,3p,115b,7s stack positions out of 300i,100n,500p,3000b,4000s
+No pages of output.

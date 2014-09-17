@@ -1,0 +1,116 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: conformal-region.pstex
+%%Creator: fig2dev Version 3.2 Patchlevel 3a
+%%CreationDate: Tue Jan  2 17:12:13 2001
+%%For: kent@ewan (Kent Ichikawa,,,)
+%%BoundingBox: 0 0 109 151
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 151 moveto 0 0 lineto 109 0 lineto 109 151 lineto closepath clip newpath
+-11.0 163.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+%%Page: 1 1
+10 setmiterlimit
+ 0.06299 0.06299 sc
+% Polyline
+15.000 slw
+n 450 450 m 1800 450 l 1800 2250 l 450 2250 l
+ cp gs 0.90 setgray ef gr gs col0 s gr 
+% Polyline
+7.500 slw
+n 900 450 m 901 453 l 904 459 l 909 470 l 916 487 l 925 508 l
+ 937 535 l 949 565 l 963 598 l 977 631 l 990 664 l
+ 1003 697 l 1015 728 l 1026 757 l 1036 784 l 1045 810 l
+ 1053 833 l 1060 856 l 1066 877 l 1071 898 l 1076 918 l
+ 1080 938 l 1084 959 l 1087 981 l 1090 1003 l 1092 1025 l
+ 1093 1048 l 1094 1071 l 1095 1095 l 1094 1119 l 1094 1143 l
+ 1092 1167 l 1090 1191 l 1087 1214 l 1084 1237 l 1080 1259 l
+ 1076 1281 l 1072 1302 l 1067 1323 l 1062 1342 l 1056 1361 l
+ 1050 1380 l 1043 1401 l 1035 1421 l 1027 1442 l 1018 1463 l
+ 1009 1484 l 999 1506 l 988 1527 l 977 1549 l 966 1571 l
+ 955 1592 l 944 1613 l 934 1633 l 923 1653 l 913 1672 l
+ 904 1690 l 894 1707 l 886 1724 l 878 1740 l 869 1758 l
+ 860 1776 l 852 1794 l 844 1812 l 836 1831 l 829 1849 l
+ 822 1868 l 815 1887 l 809 1905 l 803 1923 l 798 1941 l
+ 794 1957 l 789 1973 l 786 1988 l 783 2003 l 780 2018 l
+ 777 2034 l 775 2050 l 773 2067 l 771 2085 l 770 2105 l
+ 769 2127 l 768 2151 l 767 2175 l 766 2199 l 766 2220 l
+ 765 2236 l 765 2245 l 765 2249 l
+ 765 2250 l gs 0.90 setgray ef gr gs col0 s gr 
+$F2psEnd
+rs

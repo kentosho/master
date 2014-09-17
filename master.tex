@@ -1,0 +1,143 @@
+%#!platex
+\documentclass[11pt,a4j]{jbook}
+
+\title{修士論文 \\
+  \vspace{1cm}
+  {\Huge 弦理論の非可換幾何学的側面}\\
+  \vspace{7cm}}
+\author{ 市川 \hspace{3mm}憲人
+   \footnote{kent@hep-th.phys.s.u-tokyo.ac.jp}
+   (学籍番号96036)\\
+   \large 東京大学理学系研究科素粒子理論研究室
+   \vspace{-2mm} \\
+   \large 東京都文京区本郷 7-3-1 \\
+   \vspace{2cm}}
+\date{}
+
+\input{predef}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+%%
+%% Introduction
+%%
+\chapter{Introduction}
+\label{introduction}
+\input{introduction}
+
+%%
+%% Mathematical Review of NCG
+%%
+\chapter{非可換幾何の数学的構成}
+\label{mathmatics}
+
+\section{非可換幾何の定義}
+\label{definition}
+\input{definition}
+
+\section{変形量子化}
+\label{deformation}
+\input{deformation}
+
+\section{非可換的微分幾何}
+\label{differential}
+\input{differential}
+
+%\section{非可換指数定理}
+%\input{index-thm}
+
+%%
+%% Application of NCG to physics
+%%
+\chapter{非可換幾何の物理への応用}
+\label{application}
+\input{application}
+
+\section{非可換性導入の動機}
+\label{motivation}
+\input{motivation}
+
+\section{非可換場の理論の構成}
+\label{construction}
+\input{construction}
+
+\section{非可換場の理論の摂動論}
+\label{perturbation}
+\input{perturbation}
+ 
+\section{非可換場の理論の諸性質}
+\label{nature}
+\input{nature}
+ 
+%\section{非可換重力理論}
+%\label{ncgravity}
+%\input{ncgravity}
+
+%%
+%% Emergence of NCG in string theory
+%%
+\chapter{弦理論に現れる非可換幾何学}
+\label{emergence}
+\input{emergence}
+\section{Space-Time Uncertainty}
+ \label{uncertainty}
+ \input{uncertainty}
+
+%\section{Matrix Theoryの非可換幾何学的側面}
+% \label{matrix}
+% \input{matrix}
+
+\section{String Field Theoryの非可換幾何学的側面}
+ \label{string-field}
+ \input{string-field}
+
+\section{弦理論の低エネルギー有効理論とSeiberg-Witten写像}
+ \label{low-energy}
+ \input{low-energy}
+
+\section{非可換ソリトンとD-brane}
+ \label{soliton}
+ \input{soliton}
+ \input{d-brane}
+ \input{toeplitz}
+
+%%
+%% Conclusion
+%%
+\chapter{結論}
+\label{conclusion}
+\input{conclusion}
+
+
+%%
+%% Appendix
+%%
+\appendix
+\chapter{圏}
+\label{category}
+\input{category}
+
+\chapter{K-theory}
+\label{k-theory}
+\input{topo-k}
+\input{alg-k}
+
+%%
+%% Citations
+%%
+\nocite{IntroNCSandG}
+\nocite{IwanamiKisoSet}
+\nocite{WessBagger}
+\nocite{WeinbergQFT}
+\nocite{ConnesNCG}
+\nocite{MadoreNCDG}
+\nocite{HabaraMthesis}
+\nocite{KajiuraMthesis}
+\nocite{UesugiMthesis}
+
+\bibliographystyle{mybibsty}
+\bibliography{books,paper,thesis}
+
+\end{document}

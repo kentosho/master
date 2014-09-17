@@ -1,0 +1,59 @@
+%#!jbibtex
+@Book{AtiyahKTh,
+  author =	 {Michael Francis Atiyah},
+  title = 	 {K-Theory},
+  publisher = 	 {ADDISON-WESLEY},
+  year = 	 1967
+}
+@Book{ConnesNCG,
+  author =	 {Alain Connes},
+  title = 	 {Noncommutative Geometry},
+  publisher = 	 {ACAEMIC PRESS},
+  year =        1994
+}
+@Book{Wegge-OlsenKTh,
+  author =	 {N.E.Wegge-Olsen},
+  title = 	 {K-Theory and $C^\ast$-Algebras},
+  publisher = 	 {Oxford},
+  year = 	 1993
+}
+@Book{IwanamiKisoHom,
+  author =	 {河田 敬義},
+  title = 	 {ホモロジー代数},
+  publisher = 	 {岩波書店},
+  year = 	 1977,
+  series =	 {岩波講座 基礎数学}
+}
+@Book{MadoreNCDG,
+  author =	 {John Madore},
+  title = 	 {An Introduction to Noncommutative Differential Geometry and its Physial Applications},
+  publisher = 	 {Cambridge},
+  year = 	 1995,
+}
+@Book{PolchinskiST,
+  author =	 {Joseph Polchinski},
+  title = 	 {STRING THEORY},
+  publisher = 	 {Cambridge},
+  year = 	 1998
+}
+@Book{WeinbergQFT,
+  author =	 {Steaven Weiberg},
+  title = 	 {The Quantubm Theory of Fields},
+  publisher = 	 {Cambridge},
+  year = 	 1995
+}
+@Book{WessBagger,
+  author =	 {Julius Wess and Jonathan Bagger},
+  title = 	 {Supesymmetry and Supergravity},
+  publisher = 	 {Princeton},
+  year = 	 1976
+}
+@Book{NagaoAlgebra,
+  author =	 {永尾 汎},
+  title = 	 {代数学},
+  publisher = 	 {浅倉書店},
+  year = 	 1983,
+  number =	 4,
+  series =	 {新数学講座}
+}
+

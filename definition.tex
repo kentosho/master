@@ -1,0 +1,54 @@
+%#!platex master.tex
+非可換幾何は元々数学の文脈の中で生まれて来た概念である。そこでまず初めに
+数学的に非可換幾何を定義することから始めようと思う。非可換幾何は未だに良
+く分からない部分の多い数学の分野であり、最終的な形の定義があるわけではな
+い。ここではConnes\cite{ConnesNCG}流の非可換幾何学に従った定義\footnote
+{ここで紹介する非可換幾何学の定義はvon Neumannにまでさかのぼる。}を紹介
+する。
+
+非可換幾何で扱う対象は、(数学における)普通の意味での位相空間を拡張した対
+象である。この拡張は、多様体の上の関数の成す環$\Cinf(X)$を用いて行なわれ
+nnる。
+
+その拡張の方法を説明するためには、普通の意味での位相空間$\mathrm{M}$につ
+いて知られている以下の事実を説明しなくてはならない。
+\begin{The}[Gel'fand]
+ \label{Gel'fand}対象をコンパクト空間、射を連続写像とする圏は対象を可換
+ $\Cst$環(定義は\ref{C-star}を参照)、射を*-写像とする圏と圏同値であり、コン
+ パクト空間$\mathrm{X}$と可換$\Cst$環$\mathrm{R}$の関係
+ \begin{equation}
+  R=\mathrm{C}^\infty(\mathrm{X})
+ \end{equation}
+ はこの圏同値を与える。
+\end{The}
+この論文では、この定理についての説明は直観的なものに留める。
+
+圏とは、大まかに言えば「数学で扱う対象」という意味である。よって定理
+\ref{Gel'fand}は、位相空間の位相的な情報は過不足なくその空間の上の連続関
+数の環の中に織り込まれている。標語的に言えば、位相空間を調べることとその
+上の連続関数を調べることは等価である。位相空間の上の関数環は勿論可換であ
+るがこれを抽象的に非可換にした際に、可換な場合の位相空間の幾何学に対応す
+るものが非可換幾何学である。数学的な圏の定義及び圏の基礎的な性質は付録
+\ref{category}で与える。
+
+それ以外の非可換幾何の言葉即ち、多様体上の連続関数の成す環($\Cst$環)の言
+葉とトポロジーの言葉の関係の辞書は以下のようになる(この論文で定義されて
+いない言葉については\cite{Wegge-OlsenKth}を参照。また、この表はの元にな
+る表は\cite[p24]{Wegge-OlsenKth}にある。)。
+\begin{center}
+ \begin{tabular}{rcl}
+  トポロジー& $\leftrightarrow$ & 代数 \\
+  $\mathrm{C}^\infty(X)$& $\leftrightarrow$ & $\Cst$環 \\
+  距離 & $\leftrightarrow$ & 正値汎関数 \\
+  コンパクト & $\leftrightarrow$ & 単元を持つ(unital) \\
+  $\sigma$-コンパクト & $\leftrightarrow$ & $\sigma$-utital \\
+  微分同相  & $\leftrightarrow$ & 自己同型 \\
+  開部分群  & $\leftrightarrow$ & イデアル \\
+  閉部分群  & $\leftrightarrow$ & イデアルによる商 \\
+  稠密な開部分群  & $\leftrightarrow$ & essential ideal \\
+  コンパクト化  & $\leftrightarrow$ & unitalization \\ 
+  連続  & $\leftrightarrow$ & projectionless \\
+ \end{tabular}
+\end{center}
+
+

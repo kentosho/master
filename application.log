@@ -1,0 +1,18 @@
+This is pTeX, Version p2.1.5, based on TeX, Version 3.14159 (EUC) (Web2c 7.0) (format=jlplain 97.8.31)  11 NOV 2000 09:22
+**/home/kent/tmp/master/application.tex
+(/home/kent/tmp/master/application.tex
+LaTeX Version 2.09 <24 May 1989>
+! You can't use `macro parameter character #' in vertical mode.
+l.1 #
+     %!platex master.tex
+? x
+ 
+Here is how much of TeX's memory you used:
+ 4 strings out of 11797
+ 85 string characters out of 86694
+ 25263 words of memory out of 263001
+ 2076 multiletter control sequences out of 10000+0
+ 23946 words of font info for 90 fonts, out of 100000 for 500
+ 14 hyphenation exceptions out of 1000
+ 4i,0n,1p,62b,7s stack positions out of 300i,100n,500p,3000b,4000s
+No pages of output.

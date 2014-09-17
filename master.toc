@@ -1,0 +1,102 @@
+\contentsline {chapter}{\numberline {第1章}Introduction}{7}
+\contentsline {section}{\numberline {1.1}序}{7}
+\contentsline {section}{\numberline {1.2}非可換幾何と弦理論}{8}
+\contentsline {section}{\numberline {1.3}内容概説}{9}
+\contentsline {section}{\numberline {1.4}コンベンション}{10}
+\contentsline {chapter}{\numberline {第2章}非可換幾何の数学的構成}{13}
+\contentsline {section}{\numberline {2.1}非可換幾何の定義}{13}
+\contentsline {section}{\numberline {2.2}変形量子化}{14}
+\contentsline {subsection}{\numberline {2.2.1}変形量子化の定義}{14}
+\contentsline {subsection}{\numberline {2.2.2}Kontsevichの変形量子化}{17}
+\contentsline {subsection}{\numberline {2.2.3}Moyal積}{18}
+\contentsline {section}{\numberline {2.3}非可換的微分幾何}{19}
+\contentsline {subsection}{\numberline {2.3.1}射影加群}{19}
+\contentsline {subsection}{\numberline {2.3.2}非可換微分形式(universal differential form)}{21}
+\contentsline {subsection}{\numberline {2.3.3}接続(universal connection)}{23}
+\contentsline {chapter}{\numberline {第3章}非可換幾何の物理への応用}{27}
+\contentsline {section}{\numberline {3.1}非可換性導入の動機}{27}
+\contentsline {subsection}{\numberline {3.1.1}可換時空上での量子重力理論の障害}{27}
+\contentsline {subsection}{\numberline {3.1.2}非可換化による量子重力理論の障害の解消}{28}
+\contentsline {section}{\numberline {3.2}非可換場の理論の構成}{28}
+\contentsline {subsection}{\numberline {3.2.1}非可換場の理論}{28}
+\contentsline {subsection}{\numberline {3.2.2}$\theta $が一定値の場合}{29}
+\contentsline {subsection}{\numberline {3.2.3}$\theta $が一定値ではない場合}{29}
+\contentsline {section}{\numberline {3.3}非可換場の理論の摂動論}{29}
+\contentsline {subsection}{\numberline {3.3.1}プラナーダイアグラム}{30}
+\contentsline {subsection}{\numberline {3.3.2}ノンプラナーダイアグラム}{31}
+\contentsline {subsection}{\numberline {3.3.3}4次元$\phi ^4$理論の1-ループ計算}{32}
+\contentsline {subsection}{\numberline {3.3.4}6次元$\phi ^3$模型の1-loop計算}{34}
+\contentsline {section}{\numberline {3.4}非可換場の理論の諸性質}{35}
+\contentsline {subsection}{\numberline {3.4.1}基本的な事実}{35}
+\contentsline {subsection}{\numberline {3.4.2}UV/IR混合}{36}
+\contentsline {subsubsection}{Moyal積の積分型}{36}
+\contentsline {subsubsection}{$\phi _1\star \phi _2$が含む情報}{36}
+\contentsline {subsubsection}{$\phi ^3$模型のUV/IR混合}{37}
+\contentsline {subsection}{\numberline {3.4.3}弦理論とのアナロジー}{37}
+\contentsline {subsection}{\numberline {3.4.4}Seiberg-Witten 写像}{38}
+\contentsline {chapter}{\numberline {第4章}弦理論に現れる非可換幾何学}{41}
+\contentsline {section}{\numberline {4.1}Space-Time Uncertainty}{41}
+\contentsline {subsection}{\numberline {4.1.1}直感的な導出}{41}
+\contentsline {subsection}{\numberline {4.1.2}共形対称性とSpace-Time Uncertainty}{42}
+\contentsline {section}{\numberline {4.2}String Field Theoryの非可換幾何学的側面}{44}
+\contentsline {subsection}{\numberline {4.2.1}Open String Field Theoryのラグランジアン}{44}
+\contentsline {subsection}{\numberline {4.2.2}String fieldのassociativity}{45}
+\contentsline {subsection}{\numberline {4.2.3}open stringの相互作用の修正}{46}
+\contentsline {subsection}{\numberline {4.2.4}WittenのOpen String Field Theoryの非可換性}{47}
+\contentsline {section}{\numberline {4.3}弦理論の低エネルギー有効理論とSeiberg-Witten写像}{48}
+\contentsline {subsection}{\numberline {4.3.1}$B$場の存在下でのopen-stringの理論}{48}
+\contentsline {subsection}{\numberline {4.3.2}低エネルギー有効理論への$B$場の影響}{49}
+\contentsline {subsection}{\numberline {4.3.3}Seiberg-Witten極限}{50}
+\contentsline {subsection}{\numberline {4.3.4}ゲージ理論}{50}
+\contentsline {subsubsection}{Point-Splitting regularization}{51}
+\contentsline {subsubsection}{Pauli-Villers Regularization}{52}
+\contentsline {section}{\numberline {4.4}非可換ソリトンとD-brane}{52}
+\contentsline {subsection}{\numberline {4.4.1}GMSソリトン}{53}
+\contentsline {subsubsection}{設定とその運動方程式}{53}
+\contentsline {subsubsection}{非自明な解の例}{54}
+\contentsline {subsubsection}{Weyl射影}{55}
+\contentsline {subsubsection}{より一般的な非自明解}{55}
+\contentsline {subsubsection}{高次元への拡張}{61}
+\contentsline {subsubsection}{解の安定性}{62}
+\contentsline {subsubsection}{$\theta $が有限の時のGMSソリトン}{62}
+\contentsline {subsubsection}{$\theta $が有限でゲージ場がある時}{64}
+\contentsline {subsection}{\numberline {4.4.2}D-braneとGMSソリトン}{66}
+\contentsline {subsubsection}{D-braneのテンション}{66}
+\contentsline {subsubsection}{タキオン場のソリトンの質量}{67}
+\contentsline {subsubsection}{ゲージ場へのカップリング}{68}
+\contentsline {subsection}{\numberline {4.4.3}D-braneチャージとK-theory}{69}
+\contentsline {subsubsection}{分類空間と非可換ソリトン}{70}
+\contentsline {subsubsection}{コホモロジーからK-theoryへ}{70}
+\contentsline {subsubsection}{D$p$-braneのD$(p-2)$-braneチャージ}{71}
+\contentsline {subsection}{\numberline {4.4.4}TypeIIB理論でのToeplitz代数と指数定理}{72}
+\contentsline {subsubsection}{$B\rightarrow \infty $極限での代数の分解}{72}
+\contentsline {subsubsection}{Toeplitz作用素と指数定理}{73}
+\contentsline {subsubsection}{余次元が$2n$の時の指数定理}{74}
+\contentsline {subsection}{\numberline {4.4.5}Type IIAのD-braneとBDF構成法}{77}
+\contentsline {subsubsection}{Type IIA理論のbraneと代数の拡張}{78}
+\contentsline {subsection}{\numberline {4.4.6}非自明な$dB$がある時のD-braneのチャージ}{79}
+\contentsline {subsubsection}{Twisted $K$-theory}{79}
+\contentsline {subsubsection}{Dixmier-Douady invariant}{80}
+\contentsline {subsubsection}{Twisted $K$-theoryの物理}{80}
+\contentsline {subsection}{\numberline {4.4.7}Bott周期性の非可換ソリトンによる説明}{81}
+\contentsline {chapter}{\numberline {第5章}結論}{83}
+\contentsline {chapter}{\numberline {付 録A }圏}{85}
+\contentsline {section}{\numberline {A.1}圏の定義}{85}
+\contentsline {section}{\numberline {A.2}関手}{86}
+\contentsline {section}{\numberline {A.3}圏同値}{86}
+\contentsline {chapter}{\numberline {付 録B }K-theory}{87}
+\contentsline {section}{\numberline {B.1}トポロジカル$K$-theory}{87}
+\contentsline {subsection}{\numberline {B.1.1}トポロジカル$K$-theoryの実際的な定義}{87}
+\contentsline {subsection}{\numberline {B.1.2}$K$群の抽象的な定義}{88}
+\contentsline {subsection}{\numberline {B.1.3}相対$K$群(relative K-group)と${\mathaccentV {tilde}07E{K}}$群(reduced K-group)}{89}
+\contentsline {subsection}{\numberline {B.1.4}$K^{-n}$群}{91}
+\contentsline {subsection}{\numberline {B.1.5}K-theoryの基本的な性質}{91}
+\contentsline {subsection}{\numberline {B.1.6}Bott周期性定理}{96}
+\contentsline {section}{\numberline {B.2}$\mathrm {C}^*{}$環の$K$-theory}{96}
+\contentsline {subsection}{\numberline {B.2.1}$\mathrm {C}^*{}$環}{97}
+\contentsline {subsection}{\numberline {B.2.2}$\mathrm {C}^*{}$環の乗法単位元}{98}
+\contentsline {subsection}{\numberline {B.2.3}$\mathrm {C}^*{}$環のHilbert空間上の表現}{100}
+\contentsline {subsection}{\numberline {B.2.4}$\mathrm {C}^*{}$環の$K_0$群の定義}{101}
+\contentsline {subsection}{\numberline {B.2.5}$K_0$群の性質}{103}
+\contentsline {subsection}{\numberline {B.2.6}$K_n(\mathcal {A})$群}{105}
+\contentsline {subsection}{\numberline {B.2.7}Bott周期性と長完全系列}{106}

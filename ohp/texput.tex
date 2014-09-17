@@ -1,0 +1,69 @@
+%#!platex master-ohp.tex
+\documentclass{slides}
+\input{predef}
+
+\begin{document}
+
+$U(\infty)$の対称性を壊してしまう。\\
+$\Rightarrow U(1)$ゲージ場を導入すると$U(\infty)$が復活。
+
+$\color{blue}x,y$がもはや交換しないので、$\color{blue}x,y$で演算子形式で
+書いたハミルトニアンは、
+\[\color{blue}
+  \Ham=2\pi\Tr\left(\1half([\aniC,\creC]+1)^2
+		 +[\aniC,\phi][\creC,\phi]
+		 +\theta V(\phi)\right)
+\]
+\[\color{blue}
+ \creC\equiv \crea+i\theta^{\1half}A,\quad
+  \aniC\equiv \anih-i\theta^{\1half}\Ab\quad\mbox{(共変微分)}
+\]
+ここで、$U(\infty)$の対称性があると、{\color{red} Solution generating
+technique}を使うことができる。つまり以下のような変換をすると、
+\underline{\color{blue} 新しい解を構成できる。}
+\[\color{blue}
+ C\rightarrow SC\Sd,\quad\phi\rightarrow S\phi\Sd
+\]
+ここで、$S$は{\color{red} isometry}つまり、\ovalbox{\color{blue}$\Sd
+S=1$}を満たす。\\
+例えば$S$がshift operator \ovalbox{\color{blue}$S\equiv
+\sum\limits_{k=0}^\infty \ket{k+1}\bra{k}$}の時
+\[\color{blue}
+ \left\{\begin{array}{l}
+  \phi=\phi_*\\
+  A=0\\
+  E=0
+ \end{array}\right.\mbox{\shortstack[c]{$S^n$\\ $\Rightarrow$}}
+ \left\{\begin{array}{l}
+  \phi=\phi_*(1-\sum\limits^{n-1}_{k=0}\ket{k}\bra{k}) \\
+  \aniC=S^n\crea\Sd^n,\,\creC=S^n\anih\Sd^n \\
+  E=2\pi n\left(\frac{1}{2\theta}+\theta V(0)\right)
+ \end{array}\right.
+\]
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+ タキオン場のポテンシャル
+ \includegraphics{tachyon-potential.eps}
+\end{center}\vspace{-1cm}
+Senの仮説によると、不安定なタキオンのある真空とタキオンの無い真空とのタ
+キオンポテンシャルの差はbraneのテンションに一致する。\\
+$\Rightarrow$\parbox{14cm}{タキオン場で\NCS を構成すると,\\
+\underline{\color{blue}そのテンションはD-braneと一致する。}
+何故ならば、2次元の方向を$\color{blue}$}
+
+
+さらに、\NCS 解のまわりのゲージ場のfluctuationを考えると、\NCS とゲージ
+場のカップリングの仕方は\underline{\color{blue} D-braneのそれと一致する。}
+
+以上の事実から次のことが言えそう。\\
+\ovalbox{\parbox{16cm}{\color{blue} \NCS は実はD-braneを表
+わしている。}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\typeout{=== Region from (point) to (mark) ===}
+
+\end{document}

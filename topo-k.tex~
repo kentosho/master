@@ -1,0 +1,531 @@
+%#!platex master.tex
+
+$K$-theoryは非可換幾何学を研究する上で非常に重要な概念である、可換な空間
+の上でホモロジーが重要な性質を帯びていたが、それに対応するような非可換な
+時空の上での$\Cst$環のホモロジーを考えることが難しい。その替わりとして
+$K$-theoryによってホモロジー代数の替わりの役目を果たさせなくてはならない。
+$K$-thoeryは可換な空間のトポロジーについても考えることができる。ここでは
+まず始めに\ref{topo-k}節で可換なコンパクト空間の$K$-theoryについての説明
+をする。次いで\ref{alg-k}節で非可換な空間にも適用することができる$\Cst$
+環の$K$-theoryを説明する。
+
+\section{トポロジカル$K$-theory}
+\label{topo-k}
+
+この節では、まず$K$群の実際的な定義と$\Cst$環の$K$-thoeryにも通用する抽
+象的な$K$群の定義を与える。次いで、必要な準備をした後に$K^{-n}$群(higher
+$K$-group)を定義する。最後に、具体的に$K$群を計算するのに強力な武器とな
+る$K$群の長完全系列とBott周期性について説明する。
+
+\subsection{トポロジカル$K$-theoryの実際的な定義}
+\nocite{AtiyahKTh}
+\nocite{IwanamiKisoTopology}
+
+抽象的なK-theoryの定義は後回しにするとして、まずはある空間の上の$K$群(若し
+くは$K^0$群)を定義する。
+\begin{Def}[空間上の$K$群]
+ \label{simple-kgroup}
+ 空間$X$の上の全てのベクトル束の同型類の集合を$\Vect (X)$と書く。このとき
+ 空間$X$の$K$群(もしくは$K^0$群)は、次のような同値関係を用いて
+ ($E,F,G\in\Vect (X)$とする。)
+ \begin{eqnarray}
+  (E,F)\sim (E\oplus G,F\oplus G) \\
+  K \equiv\Vect (X)\times\Vect (X) /\sim
+ \end{eqnarray}
+ と定義される。
+\end{Def}
+
+ここでトポロジーでよく知られた定理がある。
+\begin{The}
+ \label{Serre-Swan} あるコンパクトHausdorff空間上のベクトル束$E$が与えら
+ れた時にベクトル束$F$があって、その直積$E\oplus F$が自明なベクトル束に
+ なる。
+\begin{proof}
+ Atiyahの教科書\cite[Section1.4]{AtiyahKTh}を参照。
+\end{proof}
+\end{The}
+この定理を使うと、次数$n$の自明なベクトル束を$\Trvn$と表記して多様
+体$X$の$K$群は必ず$(\mathfrak{n},G)$の形に書ける。よって、
+\begin{equation}
+ K(X)\cong\Intg\times \Vect(X)
+\end{equation}
+が言える。
+
+\subsection{$K$群の抽象的な定義}
+
+次にK群の抽象的な定義を与える。
+\begin{Def}[$K$群(Grothendieck群)]
+ \label{kgroup} 
+ $X$を任意の空間とし、$\Vect (X)$を$X$上のベクトル束の集合に半群の構造を入
+ れたものとする。但し、加法はベクトル束の直積によって定義するものとする。
+
+ このとき、任意の半群$\AlgA$に対して以下のような性質をもつアーベル群
+ $K(\AlgA)$が唯一つ存在しそれをGrothendieck群という。この$K(\AlgA)$を半
+ 群$\AlgA$の$K$群(若しくは$K^0$群)という。
+ \begin{enumerate}[K1]
+  \item ある半群準同形$\alpha :\AlgA\rightarrow K(\AlgA)$があって\\
+        任意の群$G$と半群準同形$\gamma :\AlgA\rightarrow G$に対して、\\
+	群準同形$\kappa :K(\AlgA)\rightarrow G$で
+	$\gamma =\kappa\alpha$を満たすものが唯一つ存在する。\\
+ \end{enumerate}
+\end{Def}
+
+$K$群(Groethendieck群)の唯一性を証明する前に、このような$K$群を具体的に
+構成する。これは最初に定義した$K$群の定義に一致している。まず、
+$F(\AlgA)$を$\AlgA$の元すべてからなる自由アーベル群とする。$E(\AlgA)$を
+$a+b-(a\oplus b)\quad(a,b\in \AlgA)$で生成される$E(\AlgA)$の部分群とする。
+但し$+,\oplus$はそれぞれ自由アーベル群の加法と半群$\AlgA$の加法である、
+この時、
+\begin{The}[$K$群(Grothendieck群)の具体形]
+ \label{concrete-kgroup}
+ $K(\AlgA)=F(\AlgA)\diagup E(\AlgA)$である。
+\begin{proof}
+  定義\ref{kgroup}で定義した$\alpha$として、自明な写像、即ち$a\in
+ \AlgA$に対して$a$の同値類$[a]$を対応させるような写像を選ぶ。\\
+ 今群$G$と半群準同 形$\gamma$を与えたとき、$\tilde{\kappa}$として
+ $a\in E(\AlgA)$を $\gamma(a)$に映すような写像を選ぶ。\\
+ この$\tilde{\kappa}$は$[a]$の同値類の選び方に依らない。何故なら、
+ $a,b,c,d\in \AlgA$として$\gamma,\kappa$が準同形であることから、
+ \begin{equation}
+  \tilde{\kappa}(a+b+c-(b\oplus c))=\gamma(a)
+ \end{equation}
+ であるからである。よって、$\tilde{\kappa}$は
+ $\kappa:F(\AlgA)\diagup E(\AlgA)\rightarrow G$に持ち上がる。\\
+ また、このことは$\kappa$の唯一性も示している。
+\end{proof}
+\end{The}
+
+\noindent\textbf{$K$群の唯一性の証明}\par
+\ref{kgroup}の群$G$として$K$群としての性質を満たす$K'(\AlgA)$を考えると準
+同形$\kappa :K(\AlgA)\rightarrow K'(\AlgA)$を与える。\\
+同様にして準同形$\kappa':K'(\AlgA)\rightarrow K(\AlgA)$を得ることができ
+る。\\
+$\kappa$の唯一性から、$\kappa'\circ\kappa$は恒等写像でなくてはならない。\\
+よって、$K(\AlgA)\equiv K'(\AlgA)$が言える。
+
+さらに、図\ref{functor-fig}は可換であり、半群準同形$\delta
+:\AlgA\rightarrow\AlgB$について、次のことが言える。
+\begin{figure}[h]
+$$\xymatrix{
+ \AlgA \ar[d]_{\alpha_\AlgA} \ar[r]^{\delta}
+ & \AlgB \ar[d]_{\alpha_\AlgB} \ar[r]^{\epsilon}
+ & \AlgC \ar[d]_{\alpha_\AlgC} \\
+ K(\AlgA) \ar[r]^{K(\delta)}
+ & K(\AlgB) \ar[r]^{K(\epsilon)}
+ & K(\AlgC) \\}$$
+ \caption{K-theoryの関手性}
+ \label{functor-fig}
+\end{figure}
+但し$K(\delta)$は半群準同形写像$\alpha_\AlgB\circ\delta$により、
+$K(\AlgA)$の定義から定まる準同形写像である。$K(\delta)$の定義より、この図
+式は可換である。
+\begin{The}[K-theoryの関手性]
+ $(\alpha,K(\AlgA))$の組は半群の成す圏からの(反変)関手となってい
+ る。即ち、定義\ref{functor}のような性質を満たしている。(図
+ \ref{functor-fig})
+\begin{proof}
+ 定義\ref{functor}の$F1$は$K(\AlgA)$の唯一性から直ちに従う。\\
+ $F2$も、K群の定義である$\kappa$の唯一性から従う。
+\end{proof}
+\end{The}
+
+\subsection{相対$K$群(relative K-group)と$\Kt$群(reduced K-group)}
+\label{relative-kgroup}
+$K$群の定義を定義する際に$K^0$群という別称を与えたのは
+$K^{-n}(n\in\Intg)$ という$K$群の系列があるからである。この$K^{-n}$は
+$\Kt$群と相対$K$群を用いて定義される。
+
+まず以下のような圏の関手を考える。但し、$\CatC$はコンパクト空間の成す圏で
+$\CatC^+$は基点を定めたコンパクト空間の成す圏で$\phi$は空集合である。
+また、$Y\subset X$とする。
+\begin{equation}
+ \begin{array}{ccc}
+  \CatC^2 &\longrightarrow &\CatC^+ \\
+  (X,Y)   &\longmapsto     &X/ Y \\
+ \end{array}
+ \quad\quad
+ \begin{array}{ccc}
+  \CatC   &\longrightarrow &\CatC^2 \\
+    X     &\longmapsto     &(X,\phi)\\    
+ \end{array}
+\end{equation}
+
+$\Kt$群は、\ref{relative-kgroup}で定義した$\CatC^+$の対象に対して定義されて
+いる。その定義は
+\begin{Def}[$\Kt$群]
+ 空間$X$とその基点$x_0$について包含写像$i:\{x_0\}\rightarrow X$を定義
+ する。そこで、$\Kt$群は$i$の引き戻し写像$i^\ast$について
+ \begin{equation}
+  \Kt\equiv\Ker(K(X)\xrightarrow{i^\ast} K(x_0))
+ \end{equation}
+ と定義される。
+\end{Def}
+
+$\Kt$もやはり、$\CatC^+$からの反変関手になっている。それを示す前
+に基礎的な定理を一つ与える。
+\begin{The}[完全系列の分解]
+ 短完全系列
+ \begin{equation}
+  \xymatrix{0\ar[r]&X\ar[r]^i&Y\ar[r]^j&Z\ar[r]&0}
+ \end{equation}
+ が、$k\circ j=\id_Y$となる準同形$k:Z\rightarrow Y$もしくは
+ $l\circ i=\id_X$となる準同形$l:Y\rightarrow X$を持つときこの短完全系列
+ は分解すると言われ、
+ \begin{equation}
+  Y\cong X\oplus Z
+ \end{equation}
+ が成立する。
+\end{The}
+この定理を用いて、$\Kt$の関手性を証明する。
+\begin{The}[$\Kt$群の関手性]
+ $\Kt$は$\CatC^+$からの反変関手である。
+ \begin{proof}
+ 
+  まず、$\Kt(X)$の定義と$i^*$によって自明なバンドルが自明なバンドルに映るこ
+  とから、以下のような完全系列を書くことができる。
+  \begin{equation}
+   \xymatrix{
+    0 \ar[r] & \Kt(X) \ar[r] & K(X) \ar[r]^{i^*} & K(x_0) \ar[r] & 0}
+  \end{equation}
+  collapsing map $c:x_0\rightarrow X$(即ち、全ての$x\in X$を$x_0$に映す写像
+  )の引き戻し$c^*$を考えると、$c^*\circ i^*=\id_{K(A)}$であるから、この完全
+  系列が分解することが分かる。よって、$X\in\Ob(\CatC^+)$として
+  \begin{equation}
+   K(X)=\Kt(X)\oplus K(x_0)
+  \end{equation}
+  この分解によって、$\Kt$は圏$\CatC^+$からの関手であることが分かる。
+\end{proof} 
+\end{The}
+この$\Kt$群を使って、相対$K$群を定義する。
+\begin{Def}[相対$K$群]
+ \label{relative-ktheory}
+ $$ K(X,Y)\equiv\Kt(X/Y) $$
+\end{Def}
+特に、$K(X,\phi)\cong K(X)$である。
+
+ここで、smash積を定義する。
+\begin{Def}[smash積]
+ $X,Y\in\Ob(\CatC^+)$として、smash積$X\wedge Y$とは、
+ \begin{equation}
+  X\wedge Y\equiv X \times Y / ((X\times y_0)\cup(x_0\times Y))
+ \end{equation}
+\end{Def}
+この積は結合律を満たす。即ち$X,Y,Z\in\Ob(\CatC^+)$として
+\begin{equation}
+ (X\wedge Y)\wedge Z \cong X \wedge (Y \wedge Z)
+  = X\times Y\times Z / 
+  ((X\times Y\times z_0\cup X\times y_0\times Z\cup x_0\times Y\times Z))
+\end{equation}
+
+今、$I=[0,1]$として$I/\{0,1\}\in\Ob(\CatC^+)$でありこれは$S^1$に
+基点を定めたものである。この時
+\begin{equation}
+ S^n=\overbrace{S^1\wedge S^1\wedge\cdots\wedge S^1}^{\hbox{n個}}
+\end{equation}
+である。
+
+\begin{Def}[縮約懸垂]
+ $X\in\Ob(\CatC^+)$として、$S^1\wedge X$を縮約懸垂(reduced
+ suspension)という。
+\end{Def}
+
+\subsection{$K^{-n}$群}
+
+こうして、$K^{-n}$群を定義する準備が整った。$K^{-n}$群は次のようにして定
+義される。
+\begin{Def}[$K^{-n}$群]
+\begin{equation}
+\begin{array}{lllllr}
+ \Kt^{-n}(X)&=&\Kt(S^nX)& & &(K\in\Ob(\CatC^+))\\
+ K^{-n}(X,Y)&=&\Kt^n(X/Y)&=&\Kt(S^n(X/Y))&((X,Y)\in\Ob(\CatC^2)) \\
+ K^{-n}(X)&=&K^{-n}(X,\phi)&=&\Kt(S^n(X^+))&(X\in\Ob(\CatC))
+\end{array}
+\end{equation}
+\end{Def}
+これらが、反変関手になっていることは自明である。このようにして、$K^{-n}$
+群が定義できるが、実は後に\ref{bott-periodicity} で述べるように$n$に関し
+てmodulo2の周期性がある。即ち、$K^{-n}$群には$K^0$と$K^1$の2種類しかない。
+
+\subsection{K-theoryの基本的な性質}
+
+ここで、$K^{-n}$群について知られているいくつかの事実を列挙する。特に、コ
+ホモロジーで知られている相対ホモロジーの長完全系列(詳細は
+\cite[第1章]{FomenkoDiffgeoTopo}を参照。次の式はp35にある。)に対応する物
+が$K$-theoryにも存在することが知られている。
+\begin{equation}
+ \xymatrix{\cdots\ar[r]&H^k(X,Y)\ar[r]&
+  H^k(X)\ar[r]&H^k(Y)\ar[r]^(.4){\delta^*}&H^{k+1}(X,Y)\ar[r]&\cdots}
+\end{equation}
+に対応するものが$K$-theoryにも存在する。
+
+まず準備として、Xの錐と懸垂を定義する。
+\begin{Def}[錐]
+ 空間$X$の錐$CX$とは、
+ \begin{equation}
+  CX\equiv [0,1]\times X/\{0\}\times X
+ \end{equation}
+ である。ここで、${1}\times X$を$X$そのものと見倣すという約束をする。
+\end{Def}
+\begin{Def}[懸垂]
+  $X$の 懸垂とは以下のものである。
+ \begin{equation}
+  CX/X(=[0,1]\times X/\{0,1\}\times X)
+ \end{equation}
+
+\end{Def} 
+のことである。
+錐を作る操作は、コンパクト空間の圏$\CatC$から基点を持つコンパクト
+空間の圏$\CatC^+$への関手である。これは縮約懸垂が$\CatC^+$から$\CatC^+$
+への関手であることと対照的である。ところで懸垂は名前が示す通り縮約懸垂と
+関係している。特に、K-theoryでは懸垂と縮約懸垂は同じ意味を持っている。即
+ち、
+\begin{The}[$K$-theoryでの縮約懸垂と懸垂の等価性]
+ \begin{equation}
+  K(SX)\cong K(CX/X),\Kt(SX)\cong K(CX,X)
+ \end{equation}
+ \begin{proof}
+  $X\in\Ob(\CatC)$とする$I\equiv Cx_0/x_0$を$CX/X$の部分空間と見倣すこと
+  ができる。\\
+  この時$(CX/X)/(Cx_0/x_0)\cong SX$である。$Cx_0/x_0$は1点可縮
+  であるから$\Vect(X)\cong\Vect(X/I)$なので$K(SX)\cong K(CX/X),
+  \Kt(SX)\cong K(CX,X)$がいえる。
+ \end{proof}
+\end{The}
+
+\begin{figure}[ht]
+ \begin{minipage}[b]{75mm}
+  \center{\input{XcupY.pstex_t}}
+  \caption{$X\cup Y$}
+  \label{XcupY}
+ \end{minipage} 
+ \begin{minipage}[b]{75mm}
+  \center{\input{XcupCY.pstex_t}}
+  \caption{$X\cup CY$}
+  \label{XcupCY}
+ \end{minipage}
+\end{figure}
+次に、$(X,Y)\in\Ob(\CatC^2)(Y\subset X)$を考えると、$X\cup
+CY\in\Ob(\CatC^+)$であり、また$X\cup CY/X= CY/Y$であるから、次のことが言
+える。
+\begin{Lem}
+ \label{k-1}
+ $Y\in\Ob(\CatC^+)$として、
+ \begin{equation}
+  K(X\cup CY,X)\cong K(C,CY)\cong\Kt(SY)\cong\Kt^{-1}(X)
+ \end{equation}
+\end{Lem}
+\begin{Lem}
+ \label{short-exact}
+ $(X,Y)\in\CatC^2$とし、$i:Y\rightarrow X,j:(X,\phi)\rightarrow (X,Y)$を
+ 包含写像とする。この時、次のような完全系列を作ることができる。
+ \begin{equation}
+ \label{short-exact-sequence}
+  \xymatrix{K(X,Y) \ar[r]^{j^*} & K(X) \ar[r]^{i^*} & K(Y)}
+ \end{equation}
+ \begin{proof}
+  $Y\xrightarrow{j\circ i}(Y,Y)$だから、$i^*\circ j^*=0$\\今$K$-theory 
+  での同値類を$[\cdots]$と書くことにする。 $\xi\in\Ker i^*$とした時、
+  $\xi=[E]-[\Trvn]$の形で書くと、$i^*\xi=0$より$[E]$の$Y$への制限
+  $[E\mid_Y]$は$[\Trvn]$に等しい。\\ したがって、ある自明なベクトル束
+  $\Trvm$があって以下が成立する。
+  \begin{equation}
+   (E\oplus\Trvm )\mid_Y= \Trvn\oplus\Trvm
+  \end{equation}
+  これは、$E\oplus \Trvm$の$Y$での自明化$\alpha$を見付けたということであ
+  り、$E\oplus\Trvm\diagup\alpha$は$X/Y$上のベクトル束である。よって、同
+  値類$\eta\equiv[E\oplus\Trvm\diagup\alpha]-[\Trvm\oplus\Trvn]\in
+  K(X,Y)$が定義できた。つまり、$\xi\in\Ker i^*$に対して$\eta\in K(X,Y)$
+  が定まる。\\ ここで、
+  \begin{equation}
+   j^*([E\oplus\Trvm\diagup\alpha]-[\Trvm\oplus\Trvn])=[E]-[\Trvn]
+  \end{equation}
+  であるから以下がいえる
+  \begin{equation}
+   \Ker i^*=\Img j^*
+  \end{equation} 
+  よって、式(\ref{short-exact-sequence})が完全系列であることが示され
+  た。
+\end{proof}
+\end{Lem}
+\begin{Lem}
+ \label{short-exact-sequence2}
+ $(X,Y)\in\CatC^2(Y\subset X),Y\in C^+$でXの基点として、$y_0$をと
+ ると以下は完全系列である。
+ \begin{equation}
+  \xymatrix{K(X,Y)\ar[r]&\Kt(X)\ar[r]&\Kt(Y)}
+ \end{equation}
+ \begin{proof}
+  補題\ref{short-exact}と以下の$K(X),K(Y)$の分解から明らかである。
+  \begin{eqnarray}
+   K(X)&\cong&\Kt(X)\oplus K(y_0) \nonumber \\
+   K(Y)&\cong&\Kt(Y)\oplus K(y_0)
+  \end{eqnarray}
+ \end{proof}
+\end{Lem}
+
+以上で長完全系列を示す準備が整った。
+\begin{The}
+ \label{long-exact-sequence}
+ 以下は完全系列である。
+ \begin{equation}
+  \label{long-exact-sequence-body}
+  \xymatrix@=1.2pc{\cdots\ar[r]&K^{-2}(Y)\ar[r]^\delta&
+   K^{-1}(X,Y)\ar[r]^{j^*}&K^{-1}(X)\ar[r]^{i^*}&K^{-1}(Y)\ar[r]^\delta&
+   K^0(X,Y)\ar[r]^{j^*}&K^0(X)\ar[r]^{i^*}&K^0(Y)}
+ \end{equation}
+ \begin{proof}
+  以下の系列の完全性を示せば十分である。
+  \begin{equation}
+   \xymatrix{\Kt^{-1}(X)\ar[r]^{i^*}&\Kt^{-1}\ar[r]^\delta&
+    \Kt^0(X,Y)\ar[r]^{j^*}&\Kt^0(X)\ar[r]^{i^*}&\Kt^0(Y)}
+  \end{equation}
+  何故ならば、各$\Kt$群に$K(y_0)$を付け加えることで、完全性を損うことな
+  く$K$群の完全系列にすることができるて、
+  かつ、$(X,Y)\rightarrow(S^nX,S^nY)$の置き換えで長い完全系列に継ぎ合
+  わせることができるからである。
+
+  最後の3項の完全性は補題\ref{short-exact-sequence}で示した完全系列その
+  ものである。
+
+  次に、$((X\cup CY),X)\in\Ob(\CatC^2)(Y\in\CatC^+)$を考える。補題
+  \ref{short-exact-sequence2}より次の完全系列を得る。但し、$k,m$は自然な
+  包含写像である。
+  \begin{equation}
+   \xymatrix{K(X\cup CY)\ar[r]^{m^*}&\Kt(X\cup CY)\ar[r]^{k^*}&\Kt(X)}
+  \end{equation}
+  今$p:X\cup CY\rightarrow (X\cup CY)/CY=X/Y$を$CY$を1点$y_0$に縮める写
+  像だと考えると、$CY$は1点可縮なので$\Kt(X/Y)\xrightarrow[\cong]{p^*}
+  \Kt(X\cup CY)$は同型写像である。また、$k^*\circ p^*=j^*$である。\\
+  さらに補題\ref{k-1}を用いると、同型写像$\theta:K^{-1}(X)\rightarrow
+  K(X\cup CY,X)$が存在するから$\delta\equiv p^*\circ\theta$とすると、
+  \begin{equation}
+   \xymatrix{K^{-1}(X)\ar[d]^\cong_\theta\ar[r]^(.4)\delta&
+    \Kt(X/Y)\cong K(X/Y)\ar[d]^\cong_{p^*}\ar[r]^(.7){j^*}&\Kt(X)\\
+   K(X\cup CY,X)\ar[r]^{m^*}&\Kt(X\cup CY)\ar[ur]^{k^*}}
+  \end{equation}
+  で真中の完全性が言えた。
+
+  最後に、$(X\cup C_1Y\cup C_2X,X\cup C_1Y)\in\Ob(\CatC^2)$を考える。や
+  はり、補題\ref{short-exact-sequence2}より完全系列
+  \begin{equation}
+   \label{short-exact-sequence3}
+   \xymatrix{
+   K(X\cup C_1Y\cup C_2X,X\cup C_1Y)\ar[r]&\Kt(X\cup C_1Y\cup C_2X)\ar[r]&
+   \Kt(X\cup C_1Y)}
+  \end{equation}
+  を得る。以下の図式の符号の不定性を別にした、可換性が言えれば最初の3項
+  の完全性を示すことができる。
+  \begin{equation}
+   \label{to-be-shown-commutative}
+   \xymatrix{
+    K(X\cup C_1Y\cup C_2X,X\cup C_1Y)\ar[r]&\Kt(X\cup C_1Y\cup C_2X)\\
+    \Kt(C_2X/X)\ar@{<->}[u]_\cong&\Kt(C_1Y/Y)\ar@{<->}[u]_\cong\\
+    K^{-1}(X)\ar@{<->}[u]_\cong\ar[r]^{i^*}&K^{-1}(Y)\ar@{<->}[u]_\cong}
+  \end{equation}
+  この図式の可換性を示すにあたって問題になるのは、$i^*$は同じ錐同士の包
+  含写像で定義されているが図式\ref{to-be-shown-commutative}を上から回っ
+  て行くと異なる錐の経由してしまう点にある。\\ そこで、以下のような図式
+  を考える。
+  \begin{equation}
+   \xymatrix@R1pc{
+    X\cup C_1Y\cup C_2X\ar[dd]\ar@{=>}[rr]&& C_1/Y\ar@{=>}[r]&SY\\
+    &C_1Y\cup C_2Y \ar@{=>}[ul]\ar@{=>}[ur]\ar@{=>}[ul]
+                               \ar@{=>}[dr]\ar[dl]\\
+    C_2X/X&&C_2Y/Y\ar[ll]\ar@{=>}[r]&SY}
+  \end{equation}
+  ただし、ここで現われる写像は全てcollapsion写像である。2重の矢印は潰し
+  ている部分が1点可縮であり$K$群の準同形を誘導することを意味している。図
+  式\ref{to-be-shown-commutative}が可換であることを示すためにはこの図式
+  から誘導される次の図式が可換であることを言えば良い。
+  \begin{equation}
+   \xymatrix@R1pc{
+    &K(C_1/Y)\ar[ld]&\Kt(SY)\ar[l]\ar@{<->}[dd]^\cong \\
+    K(C_1Y\cup C_2Y) \\
+    &K(C_1/Y)\ar[lu]&\Kt(SY)\ar[l]}
+  \end{equation}
+  このことは次に示す補題からいうことができる。即ち、
+ \end{proof}
+\end{The}
+\begin{Lem}
+ $S^1\in\Ob(\CatC^+)$して$T:S^1\rightarrow S^1$を同じ$S^1$を基点から逆
+ 回りに回るような写像であるとする。この時$T\wedge \id_Y:SY\rightarrow
+ SY$なる写像を考えると、$y\in\Kt(SX)$として
+ \begin{equation}
+  (T\wedge 1)^*y=-y
+ \end{equation}
+ である。
+\end{Lem}
+
+定理\ref{long-exact-sequence}から幾つかの系を導くことができる。
+\begin{Def}[牽縮(retract)]
+ 空間$X$とその部分空間$Y$があった時、連続写像$f:X\rightarrow Y$で$f$の
+ $Y$への制限が恒等写像であるような$f$が存在するとき$Y$を$X$の牽縮
+ (retract)と言う。
+ \begin{equation}
+  f\mid_Y=\id_Y
+ \end{equation}
+\end{Def}
+\begin{Cor}
+ \label{exact-bunkai}
+ $Y$を$X$の牽縮とするとき、完全系列$K^{-n}(X,Y)\rightarrow K^{-n}(X) 
+ \rightarrow K^{-n}(Y)$は分解する。即ち、
+ \begin{equation}
+  \label{bunkai}
+  K^{-n}(X)\cong K^{-n}(X,Y)\oplus K^{-n}(Y)
+ \end{equation}
+ となる。
+ \begin{proof}
+  $X$は$Y$の牽縮であるから$f\big|_Y=\id_Y$となるような$f:X\rightarrow Y$ 
+  が存在する。\\ $f^*\circ i^*$が$\id_{K^{-n}(Y)}$であることから、$i^*$ 
+  は全射でなくてはならない。\\ 定理\ref{long-exact-sequence}の式
+  (\ref{long-exact-sequence-body})より、
+  \begin{equation}
+   \xymatrix{
+    K^{-n-1}(X)\ar[r]^{i^*}&K^{-n-1}(Y)\ar[r]^\delta&
+    K^{-n}(X,Y)\ar[r]^{j^*}&K^{-n}(X)}
+  \end{equation}
+  が完全系列であることから、$j^*$は全射である。\\したがって、
+  \begin{equation}
+   \xymatrix{
+    0\ar[r]&K^{-n}\ar[r]^{j^*}&K^{-n}(X)\ar[r]^{i^*}&K^{-n}(Y)\ar[r]&0}
+  \end{equation}
+  という短完全系列を作ることができる。\\ すると、$f^*\circ i^*=
+  id_{K^{-n}(Y)}$であるから完全系列は分解して、式(\ref{bunkai})が言える。
+   \end{proof}
+\end{Cor}
+\begin{Cor}
+ $X,Y\in\Ob(\CatC^+)$とするとき$X\times Y$から$X,Y$への射影
+ $\pi_X:X\times Y\rightarrow X$と$\pi_Y:X\times Y\rightarrow Y$は次の同
+ 型を誘導する。
+ \begin{equation}
+  \Kt^{-n}(X\times Y)\cong \Kt^{-n}(X\wedge Y)
+   \oplus \Kt^{-n}(X)\oplus \Kt^{-n}(Y)
+ \end{equation}
+ \begin{proof}
+ $X$は$X\times Y$の牽縮である。また、$Y$は$(X\times Y)/X$の牽縮である。
+  よって、系\ref{exact-bunkai}を二回適用すればよい。
+ \end{proof}
+\end{Cor}
+
+\subsection{Bott周期性定理}
+
+K-theoryで知られている強力な大定理としてBott周期性定理\cite{BottPeriod}
+がある。
+\begin{The}
+ \label{bott-periodicity}
+  \begin{equation}
+  K(X)\cong K(X)^{-2}
+ \end{equation}
+\begin{proof}
+ 証明はAtiyahの教科書\cite[Section2.3]{AtiyahKTh}を参照。
+\end{proof}
+\end{The}
+
+この定理と定理\ref{long-exact-sequence}を使うと次のような循環する完全系
+列(6-term exact sequence)があることが分かる。
+\begin{equation}
+ \xymatrix{
+  K^{-1}(X,Y)\ar[r]^{j^*} & K^{-1}(X)\ar[r]^{i^*} & K^{-1}(Y)\ar[d]^\delta\\
+  K^0(Y)\ar[u]^\delta & K^0(X)\ar[l]^{i^*} & K^0(X,Y)\ar[l]^{j^*}}
+\end{equation}
+この完全系列は、具体的な$K$群を計算する上で強力な武器になる。

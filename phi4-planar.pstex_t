@@ -1,0 +1,17 @@
+\begin{picture}(0,0)%
+\includegraphics{phi4-planar.pstex}%
+\end{picture}%
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2649,1583)(64,-808)
+\put(1334,655){\makebox(0,0)[lb]{\smash{\SetFigFont{9}{10.8}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vk$}%
+}}}
+\put(459,-766){\makebox(0,0)[lb]{\smash{\SetFigFont{9}{10.8}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vp$}%
+}}}
+\end{picture}

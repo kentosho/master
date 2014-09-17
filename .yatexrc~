@@ -1,0 +1,8 @@
+(setq tmp-env-table '(
+("gather")
+("Cor")
+("proof")
+("Lem")
+("Def")
+("pmatrix")
+))

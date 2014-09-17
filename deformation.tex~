@@ -1,0 +1,248 @@
+%#!platex master.tex
+
+物理学の文脈で実際に非可換幾何を構成する方法として、物理では多くの場合一般
+の幾何を変形量子化するという手法がとられる。それは、我々が観測している時空
+は可換であるからである。即ち、変形量子化とは簡単に言ってしまうと知られてい
+る代数をある微小なパラメータを使って少しずらすということであり、我々の時空
+が非可換幾何によって記述されるものであったとすると、それは可換な幾何学から
+少しずれた非可換幾何学によって記述されるかもしれないからである。
+
+本節では、可換な代数の変形量子化にまつわる数学を説明する。
+
+\subsection{変形量子化の定義}
+変形量子化ではまず、可換な空間の上の連続関数の成す環$\AlgA\equiv\Cinf
+(X)$を考える。$\AlgA_{\kbar}$を$\AlgA$のGerstenhaberの意味での変形量子化で
+あるとする。即ち、$\AlgA$と$\AlgA_{\kbar}$はベクトル空間としては同型である
+が積だけが変形されているものと考える。
+
+変形量子化を定義する前に、まずPoisson代数を定義する。
+\begin{Def}[Poisson代数]
+ \label{poiss}
+ $\AlgA$がPoisson代数であるとは、$f,g,h\in\AlgA$として次のような性質を満
+ たす積$\{\cdot,\cdot\} :\AlgA\times \AlgA\rightarrow\AlgA$が存在するこ
+ とをいう。
+ \begin{enumerate}[P1]
+  \item $\{\cdot,\cdot\}$は$\Cplx$双線型であり、
+	\begin{eqnarray}
+	 \{f,g\}=-\{g,f\}
+	\end{eqnarray}
+	を満たす。
+  \item $\{\cdot,\cdot\}$はYacobi恒等式を満たす。
+	\begin{equation}
+	 \{f,\{g,h\}\}+\{g,\{h,f\}\}+\{h,\{f,g\}\}=0
+	\end{equation}
+  \item $\{,\cdot\}$はderivationである。
+	\begin{equation}
+	 \{f,gh\}=\{f,g\}h+g\{f,h\}
+	\end{equation}
+ \end{enumerate}
+\end{Def}
+
+また、Poisson代数の概念を用いてPoisson多様体の概念を定義できる。
+\begin{Def}[Poisson多様体]
+ 空間$X$の上の関数環$\Cinf(X)$がPoisson代数であるとき$X$をPoisson多様体
+ という。
+\end{Def}
+
+変形量子化は、このPoisson代数に対して定義することができる。
+\begin{Def}[Poisson代数の変形量子化]
+ \label{dfrm-poiss}
+ Poisson代数$\AlgA$の変形量子化$\AlgAk$は次のように定義される。
+ \begin{enumerate}[D1]
+  \item $\AlgA$と$\AlgAk$は$\Cplx$上のベクトル空間としては一致している。
+  \item $\AlgAk$の積$\star$は次のように定義される。$f,g,g\in\AlgA$として
+	\begin{equation}
+	 f\star g = fg+\sum_{n=1}^\infty B_n(f,g)\kbar^n
+	\end{equation}
+  \item $B_1(f,g)$はPoisson括弧に一致する。
+	\begin{equation}
+	 B_1(f,g)=\{f,g\}
+	\end{equation}
+  \item $\AlgAk$の積$*$は、結合律
+	\begin{equation}
+	 (f\star g)\star h=f\star (g\star h)
+	\end{equation}
+	を満たす。
+ \end{enumerate}
+ このようにして定義した変形量子化を$(\AlgA,\star)$と表記する。
+\end{Def}
+注意しなくてはならないのは、このように定義された変形量子化が存在するかど
+うかは自明ではないということである。
+
+この変形量子化にはゲージ変換による同値関係を考えることができる。
+\begin{Def}[変形量子化のゲージ変換]
+ 変形量子化$(\AlgA,\star_1)$と$(\AlgA,\star_1)$が同値であるとは、
+ $\kbar$-線型写像$T: \AlgA[[\kbar]]\rightarrow\AlgA[[\kbar]]$で次の性質
+ を満すものが存在することを言う。
+ \begin{enumerate}[Deq1]
+  \item $T$には逆像$T^{-1}$が存在して、
+	\begin{equation}
+	 T=\id_\AlgA+\sum_{n=1}^\infty T_n\kbar^n
+	\end{equation}
+	と書くことができる。
+  \item Tは$(\AlgA,\star_1)$と$(\AlgA,\star_2)$をintertwineする。
+	\begin{equation}
+	 T(f\star_1g)=T(f)\star_2T(g)
+	\end{equation}
+ \end{enumerate}
+\end{Def}
+物理的な文脈では$\AlgA$は空間の上の場の成す環だったから、このゲージ変換
+は場の再定義と捉えることができる。
+
+今迄は代数$\AlgA$がPoisson構造を持つことを仮定して議論を進めてきていたが、
+このゲージ変換は一般の代数で定義\ref{dfrm-poiss}から条件D3を除いて定義し
+た一般の代数の変形量子化に対しても定義することができる。
+
+この時、次のことが分かる\cite[p78$\sim$p79]{KajiuraMthesis}。
+\begin{The}
+ \label{eq-poiss} 一般の可換な代数の変形量子化が存在した時それはPoisson
+ 代数の変形量子化と上で定義したゲージ変換(物理の文脈では場の再定義)で結
+ ばれている。
+\end{The}
+その定理を証明するためには、Hochshildコホモロジーの概念を定義しなくては
+ならない。
+
+\begin{Def}[Hochshild複体]
+ $\AlgA$を可換な代数としてHochshild複体はHochshild $p$-複体は
+ $C_p:\overbrace{\AlgA\otimes\cdots \otimes\AlgA}^{\mbox{p個}}
+ \rightarrow\AlgA$の直和であり、$c_p\in C_p,f_i\in\AlgA$として次で定義さ
+ れるようなcoboundary作用素$d:C_p\rightarrow C_{p+1}$を持つものである。
+ \begin{align}
+  (dc_p)(f_0,f_1,\ldots,f_p)=&f_0C(f_1,\ldots,f_p) \nonumber\\
+   &-\sum^{p-1}_{q=0}(-1)^qc_p(f_0,\ldots,f_qf_{q+1},\ldots,f_p)\nonumber\\
+   &+(-1)^{p+1}c(f_0,\ldots,f_{p-1})f_p
+ \end{align}
+\end{Def}
+\begin{Def}[Hochshildコホモロジー]
+ HochshildコホモロジーはHochshild複体から、$\Ker d\diagup\Img d$で定義される。
+\end{Def}
+
+そこで、前述の定理\ref{eq-poiss}の証明をする。一般の代数の変形量子化の定
+義(\ref{dfrm-poiss})の結合則(D4)の$\kbar^1$の部分を考えると、
+\begin{equation}
+ fB_1(g,h)+B_1(f,gh)=B_1(f,g)h+B_1(fg,h)
+\end{equation}
+いま、$B_1$を対象な部分$B_1^+$と反対称な部分$B_1^-$に分けて、更に上式で
+の$f$と$h$の交換について対象な部分と反対称な部分に分ける。
+\begin{align}
+ A(f,g,h)\equiv&fB_1^-(g,h)-B_1^-(fg,h)+B_1^-(f,gh)-B_1^-(f,g)h=0\nonumber\\
+ &fB_1^+(g,h)-B_1^+(fg,h)+B_1^+(f,gh)-B_1^+(f,g)h=0
+\end{align}
+であるから、$B_1^+,B_1^-$はHochshild 2-cocycleになっている。ここで、$
+A(f,g,h)+A(g,h,f)-A(h,f,g)=0$より、
+\begin{equation}
+ B_1^-(f,gh)=gB_1^-(f,h)+B_1^-=0
+\end{equation}
+すなわち、Poisson構造(定義\ref{poiss})のP3が導かれた。
+
+また、代数のゲージ変換$(\AlgA,\star)\rightarrow(\AlgA,\star')$を考えた時、
+$\kbar$の1次の項から
+\begin{equation}
+ B_1'(f,g)-B_1(f,g)=-fT_1(g)+T_1(fg)-T_1(f)g
+\end{equation}
+となっていて、Hochshild 2-coboundaryになっている。ここで、対称な
+Hochshild 2-cocycleはHochshild 2-coboundaryに一致しているという事実を使
+うと、ゲージ変換によって、$B_1^+$を消すことができる。よって、$B_1$は反
+対称である。よってPoisson構造の条件P1を満たす。
+
+さらに、(\ref{dfrm-poiss})の結合則の$\kbar^2$の係数の部分を見ると、
+\begin{equation}
+ fB_2(g,h)+B_2(f,gh)+B_1^-(f,B_1^-(g,h))
+  =B_2(f,g)h+B_2(fg,h)+B_1^-(B_1^-(f,g),h)
+\end{equation}
+であるが、また$f,g$について対称な部分と反対称な部分に分けると、
+\begin{align}
+ fB_2^-(g,h)-B_2^-(fg,h)+B_2^-(f,gh)-B_2^-(f,g)h=0\\
+ fB_2^+(g,h)-B_2^+(fg,h)+B_2^+(f,gh)-B_2^+(f,g)h\nonumber \\
+  =B_1^-(B_1^-(f,g),h)+B_1^-(B_1^-(g,h),f)\label{as-B}
+\end{align}
+で(\ref{as-B})を更に$f,g,h$についてサイクリックに足し合わせると、
+Poisson構造の残った条件P2
+\begin{equation}
+ B_1^-(B_1^-(f,g),h)+B_1^-(B_1^-(h,f),g)+B_1^-(B_1^-(g,h),f)=0
+\end{equation}
+を得る。
+
+以上で、$B_1(f,g)$がPoisson構造を定義することが分かり、定理
+\ref{eq-poiss}を示すことができた。
+
+
+\subsection{Kontsevichの変形量子化}
+
+Kontsevichは任意のPoisson多様体上の関数環について、変形量子化が存在する
+ことを変形量子化の具体形を求めることで証明した。
+
+その形を説明なしに与えてしまうと、以下のような形をしている。
+\begin{equation}
+ \label{kontsevich-eq}
+ (f\star g)= fg+\sum_{n=1}\left(\sum_{\Gamma\in G_n}
+			   \omega_\Gamma B_\Gamma(f,g)\right)\kbar^n
+\end{equation}
+\begin{figure}[ht]
+ \begin{center}
+  \input{kontsevich.pstex_t}
+  \caption{$n=3$の場合のグラフの例}
+ \end{center}
+\end{figure}
+$B_\Gamma(f,g),w_\Gamma$をこれから定義する。
+
+まず、$\{1,2,\ldots ,n,L,R\}$という$n+2$個の頂点(vertices)を持ったグラフ
+を考える。これは以下のような性質をもったグラフである。
+\begin{itemize}
+ \item 頂点$i\in\{1,\ldots,n\}$からはそれぞれ2本の矢印(oriented
+       edge)$e^1_i,e^2_i$が出ていて、$\{1,2,\ldots
+       ,i-1,i+1,\ldots,n,L,R\}$に向かっている。この2本の矢印の向かう先を
+       それぞれ$v^1(i),v^2(i)$とする。
+ \item このグラフでは2本の矢印が一致することはない。
+\end{itemize}
+このようなグラフの全体が$G_n$である。
+
+このとき$\ihalf\theta_{\mu\nu}$をPoisson括弧を定義するような反対称行列と
+する。($\mu\nu$は局所座標の足)この時$B_\Gamma(f,g)$は次のように定義され
+る。
+\begin{equation}
+ B_\Gamma(f,g)(x)=\prod_{i=1}^n\partial^{x_{v^1(i)}}_{\mu_i}
+  \partial^{x_{v^2(i)}}_{\nu_i}\prod_{i=1}^n\ihalf\theta(x_i)^{\mu_i\nu_i}
+  f(x_L)g(x_R)\Big|_{x_1=\cdots=x_n=x_L=x_R=x}
+\end{equation}
+
+つぎに、$\omega_\Gamma$は次のようにして定義される。\\ 今、グラフの各頂点
+を上半平面に配置する。この時、頂点$i$の複素座標を$z_i$ とし、頂点$L$の複
+素座標を$0$頂点$R$の複素座標を$1$とする。\\ 上半平面の2点を結ぶ測地線は
+実軸$\Im(z)=0$と垂直に交わる円弧であったことを思い出して、2点$w,z$と無限
+円点$\infty$の間の成す角度を$\phi(w,z)$とすれば、
+\begin{equation}
+ \phi(w,z)=\Arg\left(\frac{z-w}{z-\bar{w}}\right)
+  =\frac{1}{2i}\ln\left(
+  \frac{(z-w)(\bar{z}-w)}{(\bar{z}-\bar{w})(z-\bar{w})}\right)
+\end{equation}
+この$\phi$を用いて$\omega_\Gamma$を定義する。$C_n(H)\equiv\{u\in H^n,
+u_i\neq u_j\}$として、
+\begin{equation}
+ \omega_\Gamma=\frac{1}{(2\pi)^{2n}n!}\int_{C_n(H)}
+  \bigwedge\limits^n_{i=1}d\phi(u_i,u_{v^1(i)})\wedge d\phi(u_i,u_{v^2(i)})
+\end{equation}
+で定義される。
+
+\subsection{Moyal積}
+\label{moyal-subsec}
+
+Moyal積は変形量子化の1つの例になっている。具体的には、$\theta$が空間のあ
+らゆる点で一定あるときに対応している。このとき$B_\Gamma$は全ての矢印のペ
+アが$L,R$か$R,L$に行くものだけが残る。$\omega_\Gamma$は結局角度の積分に
+帰着する。角度$\phi(u,0),\phi(u,1)$の値域は$[0,\pi]$であり、$z=x+iy$とし
+て$dzd\zb=2dxdy$であるから、
+\begin{align}
+ \sum_{\Gamma\in G_n}B_\Gamma(f,g)&=2^n(\ihalf\theta^{\mu\nu}
+  \partial^y_\mu\partial^z_\nu)^nf(y)f(z)\Big|_{y=z=x}\\
+ \omega_\Gamma&=\frac{1}{(2\pi)^{2n} n!}\left(2\pi^2\right)^n
+ =\frac{1}{2^n n!}
+\end{align}
+となる。結局、変形量子化した積$f\star g$は、Moyal積
+\begin{align}
+ f\star g&=fg+\sum_n^\infty\frac{1}{n!}(\ihalf\kbar\theta^{\mu\nu}
+  \partial^y_\mu\partial^z_\nu)^nf(y)f(z)\Big|_{y=z=x}\\
+  &=\E^{\ihalf\kbar\theta^{\mu\nu}
+  \partial^y_\mu\partial^z_\nu}f(y)f(z)\Big|_{y=z=x}
+\end{align}
+になる。

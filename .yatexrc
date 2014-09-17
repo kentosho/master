@@ -1,0 +1,9 @@
+(setq tmp-env-table '(
+("subequations")
+("gather")
+("Cor")
+("proof")
+("Lem")
+("Def")
+("pmatrix")
+))

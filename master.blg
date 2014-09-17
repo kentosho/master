@@ -1,0 +1,57 @@
+This is JBibTeX, Version 0.32, based on BibTeX, Version 0.99c (Web2C 7.3.1)
+The top-level auxiliary file: master.aux
+The style file: mybibsty.bst
+Reallocated wiz_functions (elt_size=4) to 3400 items from 0.
+Database file #1: books.bib
+Database file #2: paper.bib
+Database file #3: thesis.bib
+Warning--empty journal in ExactNCSol
+Warning--empty journal in NCTacKth
+Warning--empty journal in DefQPoissonMfd
+Warning--empty journal in IntroNCSandG
+Warning--empty journal in TopoChargeNCSol
+Warning--empty journal in NCPertDyn
+Warning--empty journal in NCSolFinTheta
+You've used 53 entries,
+            3127 wiz_defined-function locations,
+            995 strings with 11003 characters,
+and the built_in function-call counts, 21892 in all, are:
+= -- 1978
+> -- 766
+< -- 82
++ -- 268
+- -- 257
+* -- 1054
+:= -- 3201
+add.period$ -- 162
+call.type$ -- 53
+change.case$ -- 241
+chr.to.int$ -- 0
+cite$ -- 60
+duplicate$ -- 1229
+empty$ -- 1770
+format.name$ -- 427
+if$ -- 5053
+int.to.chr$ -- 1
+int.to.str$ -- 4
+missing$ -- 63
+newline$ -- 268
+num.names$ -- 152
+pop$ -- 507
+preamble$ -- 1
+purify$ -- 202
+quote$ -- 0
+skip$ -- 1204
+stack$ -- 0
+substring$ -- 636
+swap$ -- 285
+text.length$ -- 82
+text.prefix$ -- 28
+top$ -- 0
+type$ -- 368
+warning$ -- 7
+while$ -- 169
+width$ -- 58
+write$ -- 692
+is.kanji.str$ -- 564
+(There were 7 warnings)

@@ -1,0 +1,612 @@
+%#! platex master.tex
+
+非可換な時空に於ける場の理論には、トポロジカルでないソリトン解が存在する
+\cite{NCSoliton}\cite{NCTachyon}。このトポロジカルでないソリトン解は、弦
+理論の弦やD-braneなどと関係しており非常に興味深い対象である。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{GMSソリトン}
+\label{GMSsoliton}
+
+\subsubsection{設定とその運動方程式}
+簡単の為にEuclidianの2次元のスカラー場の理論を考える。高次元への拡張は容
+易であるが、その方法は後回しにする。また後に、$\theta\rightarrow\infty$ 
+の極限を取ることを予告しておく。この$\theta\rightarrow\infty$の極限は非
+可換ソリトンの存在自体には本質的では無く、実際に有限の$\theta$での計算が
+なされている\cite{NCSolFinTheta}\cite{ExactNCSol}。
+
+最も簡単な例として非可換2次元スカラー場の理論を考える。この理論のハミル
+トニアンは
+\begin{equation}
+ \Ham={1\over g^2}\int dx\,dy\, \left(\1half(\partial\phi)^2
+				 +V(\phi)\right)
+\end{equation}
+と書くことができる。但し、$V(\phi)$の中の積はMoyal積になっている。即ち
+\begin{equation}
+ \label{beforerescale}
+ f\star g(x,y)=\E^{\ihalf\theta(\partial_{x_1}\partial_{y_2}
+  -\partial_{x_2}\partial_{y_2})}
+  f(x_1,y_1)g(x_2,y_2)\Big|_{x_1=x_2=x,y_1=y_2=y}
+\end{equation}
+である。また、$V(\phi)$は$\phi$の多項式、
+\begin{equation}
+ \label{GMSpotential}
+ V(\phi)=\1half m^2 \phi^2 + \sum^r_{j=3}{b_j\over j}\phi^{j}
+\end{equation}
+となっているとする。
+
+ここで、$\theta\rightarrow\infty$なる極限を考える。すると、運動項が無視で
+きるようになるがそれを見る為に、時空の座標をリスケールして、非可換性が現れ
+る大きさが$\sim 1$になるようにする。即ち
+\begin{equation}
+ \left\{
+ \begin{array}{l}
+  x\rightarrow\sqrt{\theta}x \\
+  y\rightarrow\sqrt{\theta}y \\
+ \end{array}
+ \right.
+\end{equation}
+とする。このリスケールによって、(\ref{beforerescale})のハミルトニアンは次
+のように書きかわる。
+\begin{equation}
+ \Ham={1\over g^2}\int dx\,dy\, \left(\1half(\partial\phi)^2
+				 + \theta V(\phi)\right)
+\end{equation}
+すると、$\theta\rightarrow\infty$の極限では運動項が落ちて、ポテンシャルの
+項のみが残る。この時、運動方程式は
+\begin{equation}
+ {\partial V\over \partial\phi}=0
+\end{equation}
+具体的には、ポテンシャルの形(\ref{GMSpotential})に応じて
+\begin{eqnarray}
+ \label{GMSeom}
+ & m^2\phi+b_3\phi\star\phi & \mbox{for cubic}(r=3)\\
+ & m^2\phi+b_3\phi\star\phi+b_4\phi\star\phi\star\phi=0 
+  & \mbox{for quartic}(r=4)
+\end{eqnarray}
+となる。ただし$b_2=m^2$と表記した。
+
+\subsubsection{非自明な解の例}
+この方程式には、可換場の理論の解である$\phi(x,y)=\lambda_i$ ( $\lambda_i
+$は運動方程式(\ref{GMSeom} )を可換な多項式と見たときの根)以外に非可換場の
+理論特有の解がある。
+
+それは、
+\begin{equation}
+ \label{GMSidempotent}
+ (\phi_0\star\phi_0)(x)=\phi_0(x)
+\end{equation}
+を満たすような関数の存在を仮定することで得られる。このような関数が存在する
+とすれば$\phi^n_0=\phi_0$なので、
+\begin{equation}
+ \phi=\lambda_i\phi_0
+\end{equation}
+は(\ref{GMSeom})の方程式を満たす非自明な解である。
+
+実際に、このような$\phi_0$は存在する。その1つは以下のようにして求める。
+まず、次のようなパケットを考える。
+\begin{equation}
+ \psi_\Delta(r)={1\over\pi \Delta^2}\E^{-{r^2\over \Delta^2}}
+  \hspace{1cm} (r^2\equiv x^2+y^2)
+\end{equation}
+次に、運動量空間に移行する。
+
+\begin{equation}
+ \tilde{\psi}_\Delta (k) = \int{\E^{ik\cdot x}\psi_\Delta(x)d^2x}=
+  \E^{-{k^2\Delta\over 4}}
+\end{equation}
+運動量空間では、Moyal積は次のように表わされる、
+\begin{equation}
+ \left(\tilde{f}\star\tilde{g}\right)(p)=
+  \int{d^dx\tilde{f}(k)\tilde{g}(p-k)\E^{\ihalf k_\mu\theta^{\mu\nu}(k-p)_\nu}}
+\end{equation}
+この式を用いて$\tilde{\psi}_\Delta (k)$同士のMoyal積を計算すると、
+\begin{eqnarray}
+  \left(\tilde{\psi}_\Delta (r)\star\tilde{\psi}_\Delta (r)\right) (p) 
+  &=& {1\over (2\pi)^2}\int{d^k\tilde{\psi (k)}\tilde{\psi (p-k)}}
+  \E^{\ihalf\theta \epsilon^{\mu\nu} k_\mu (p-k)_\nu} \nonumber \\
+  &=& {1\over 2\pi \Delta^2}\E^{-{p^2\over 8}(\Delta^2+{1\over\Delta^2})}
+\end{eqnarray}
+となるから、$\Delta^2=1$の時、$2\pi\tilde{\psi}_1$は式
+(\ref{GMSidempotent})を満たす。これをもとの座標空間に戻すと、
+\begin{equation}
+ \phi_0(x,y)=2\E^{-r^2}
+\end{equation}
+となり、この関数は式(\ref{GMSidempotent})をFourier変換した物の解になってい
+る。結局最終的な運動方程式(\ref{GMSeom})の解は次のようになる。
+\begin{equation}
+ \phi=2 \lambda_i \E^{-r^2}
+\end{equation}
+このような解が存在するのは、非可換空間上の理論で積がMoyal積になってい
+るおかげである。
+
+\subsubsection{Weyl射影}
+リスケール後の座標の交換関係は、
+\begin{equation}
+ [\xh,\yh]=i
+\end{equation}
+となる。これは1個の生成消滅演算子の成す代数と見ることができる。よって、
+この2次元空間の上の関数の成す環は、1個の調和振動子から成るFock空間に作用
+するオペレータの成す$\Cst$環と解釈することができる。但し、積をMoyal積に
+する為には、オペレータの中の生成消滅演算子のオーダリングをMoyal積と矛盾
+しないように上手く取る必要がある。このように、空間を非可換化して関数の成
+す環から、あるオーダリングを取ったオペレータの成す環に射影することをWeyl
+射影という。Weyl射影は次のようにして定義されている。
+\begin{equation}
+ \hat{O}_f(\xh,\yh)={1\over (2\pi)}\int d^2k \tilde{f}(k)
+  \E^{-i(k_x\xh+k_y\xh)}
+\end{equation}
+この定義はシンメトリックなオーダリングによる定義になっており、Moyal積とこ
+のオペレータの積は矛盾しない。また、Weyl射影によって座標空間または運動量空
+間にわたる積分は、
+\begin{equation}
+ \int d^dx\rightarrow (2\pi)^{d/2}\Tr_{\mathcal{H}}
+ ,\int d^dk\rightarrow\Tr_{\mathcal{H}}
+\end{equation}
+
+ここで与えたWeyl射影は以外にも、より一般的なWeyl射影を定義をすることが可
+能である。即ち、生成消滅演算子を別のオーダリングにしても良い。しかしその
+時には、もはや積はMoyal積ではない別の積である。異なるオーダリングをとる
+操作は\ref{deformation}節で説明した変形量子化のゲージ変換に相当している。
+
+\subsubsection{より一般的な非自明解}
+式(\ref{GMSidempotent})を満たすようなより一般の解を求める。便宜の為に、新
+たに$\crea$と$\anih$という演算子を次のように定義する。
+\begin{equation}
+ \left\{
+  \begin{array}{l}
+   \crea = {\xh - i \yh\over\sqrt{2}} \\
+   \anih = {\xh + i \yh\over\sqrt{2}} \\
+  \end{array}
+ \right.
+\end{equation}
+これらの演算子の交換関係は
+\begin{equation}
+ [\anih,\crea]=1
+\end{equation}
+となる。こうした時のWeylオーダリングによるWeyl射影は、
+\begin{equation}
+ \hat{O}_f(\xh,\yh)={1\over (2\pi)}\int d^2k \tilde{f}(k)
+  \E^{-i(k_z\crea+k_{\zb}\anih)}
+\end{equation}
+但し、$k_z,K_\zb$は
+\begin{equation}
+ \left\{
+ \begin{array}{l}
+  k_z={k_x+ik_y\over\sqrt{2}}\\
+  k_{\zb}={{k_x-ik_y}\over\sqrt{2}} \\
+ \end{array}
+ \right.
+ \, , \, k_xx + k_yy=k_{\zb}\anih+k_z\crea
+\end{equation}
+のように定義されている。
+
+この、生成消滅演算子によって作られるFock空間の基底を、習慣に従って
+$\ket{n}$その双対基底を$\bra{n}$と書く。
+
+ところで、Fock空間上のオペレータ$\ket{m}\bra{n}$は生成消滅演算子の言葉を
+使って、次のように表わすことができる。
+\begin{equation}
+ \label{GMSmatrix}
+ \ket{m}\bra{n}=:{\crea^m\over\sqrt{m!}}
+ \E^{-i\crea\anih}{\anih^n\over\sqrt{n!}}:
+\end{equation}
+このとき、$\crea$を先頭に持って行き$\anih$を末尾に持って行くオーダリング(ノー
+マルオーダリング)を$:\cdots :$と表記した。ノーマルオーダリングはMoyal積と両
+立しない事を注意すべきである。
+
+ここで、式(\ref{GMSidempotent})はオペレータの成す環の羃等な射影演算子を表わ
+していると解釈できる。
+
+$\ket{n}\bra{n}$の(係数1の)和は式(\ref{GMSidempotent})を満たすような射影演
+算子である。これをMoyal積と矛盾しないようなオーダリングに直し、それを元の
+関数に対応させるという操作をすることで、関数の
+
+ここで、Campbell-Baker-Housdorff公式を用いると、
+\begin{equation}
+ \E^{-i(k_x\xh +k_y\yh)}
+  =\E^{-i(k_{\zb}\anih+k_z\crea)}
+  =\E^{k_zk_{\zb}\over 2}:\E^{-i(k_{\zb}\anih +k_z\crea)}:
+  =\E^{k^2\over 4}:\E^{-i(k_x\xh +k_y\yh)}:
+\end{equation}
+であるから、運動量基底では同じ関数をノーマルオーダリングによるWeyl射影で
+映した演算子$\mathcal{O}_N$とWeylオーダリングの演算子によるWeyl射影で定
+義した演算子$\mathcal{O}$との間の関係を運動量基底で表わすと次のようにな
+る。
+\begin{equation}
+ \mathcal{O}_N(k)=\E^{k^2\over 4}\mathcal{O}(k)
+\end{equation}
+何故なら、
+\begin{eqnarray}
+ :\tilde{f}(\crea,\anih):
+  &=&  {1\over (2\pi)}\int{dk\, \tilde{f}(k)
+       :\E^{k_x\xh + k_y\yh}:} \nonumber \\
+  &=&  {1\over (2\pi)^2}\int{dk\, \tilde{f}(k)\, \E^{-k^2\over 4}
+       \E^{k_x\xh + k_y\yh}} 
+\end{eqnarray}
+であるからである。この式を用いて、$\ket{n}$の空間のノーマルオーダリング
+で定義した演算子からWeylオーダリングの演算子に対応した関数を求めることが
+できる。即ち、ノーマルオーダリングの演算子の中にある$\xh,\yh$をノーマル
+オーダリングのまま$x,y$に直した関数を$f_N$と書く。これは、ノーマルオーダ
+リングによる逆Weyl射影である。更に、$f_N$をFourier変換したものを
+$\tilde{f}_N$ と書けば、
+\begin{equation}
+ \tilde{f}(k)=\E^{{k^2\over 4}}\tilde{f}_N(k)
+\end{equation}
+であり、こうして求まった$\tilde{f}(k)$を逆Fourier変換すれば良い。
+
+今$\ket{0}\bra{0}$にWeyl写像で対応する関数を求める。ノーマルオーダリング
+での$\E^{-\crea\anih}$に対応する関数を$\tilde{f_N}(k)$とすれば、
+\begin{eqnarray}
+ \E^{-\crea\anih}&=&\left[\E^{-(\xh^2 + \yh^2)/2}\right] \\
+  &=&{1\over (2\pi)^2}
+  \int d^2k \tilde{f}(k)\E^{-i(k_x\xh+k_y\yh)}
+\end{eqnarray}
+より、$\tilde{f_N}=\E^{-k^2\over 2}$だから、$\E^{-\crea\anih}$をWeylオー
+ダリングに直したものに対応する関数を$\tilde{f}$とすれば、$\tilde{f}=\E^{
+-k^2\over 4}$となる。更に逆フーリエ変換をして
+\begin{equation}
+ \tilde{f}(x,y)=2\E^{-r^2}
+\end{equation}
+となるが、これはまさに先程求めた解になっている。
+
+$\ket{n}\bra{n}$に対応した解は次のように与えられる。
+\begin{equation}
+ \label{GMS-general-radial-solution}
+ \ket{n}\bra{n}\rightarrow 2(-1)^n \E^{-r^2}L_n(2r^2) \equiv \phi_n
+\end{equation}
+また射影演算子には対応しないが、$\ket{m}\bra{n}$を逆Weyl変換して得られた
+関数を$\phi_{mn}$と書くことにする。当然$\phi_n=\phi_{nn}$である。
+\begin{equation}
+ \label{GMS-general-matrix-element}
+ \ket{m}\bra{n}\rightarrow \phi_{mn}
+\end{equation}
+
+但し$L_n$は$n$次のLaguerre多項式である。この解は、次のようにして求められ
+る。今、$\ket{n}\bra{n}$からオーダリングを変更せずに関数に直した関数を
+$f^n_N(x)\equiv{{r^2\over 2}\E^{r^2/2}\over n! }$とすると
+\begin{eqnarray}
+ \sum_{n=0}^\infty (-t)^n f^n_N(x)&=&\E^{-{(1+t)r^2\over 2}} 
+  \nonumber \\
+ {1\over 2\pi}\int d^2x\, \E^{-{(1+t)r^2\over 2}}\E^{i(k_xx+K_yy)}
+  &=&{1 \over 1+t}\E^{-{k^2\over 2(1+t)}} \nonumber \\
+ {1\over 1+t}\E^{-{1\over 2(1+t)}}\E^{k^2/4}
+  &=& {1\over 1+t}\E^{-{1-t\over 4(1+t)}k^2} \nonumber \\
+ {1\over 2\pi} \int d^2k\, {1\over 1+t} \E^{-{1-t\over 4(1+t)}}
+  &=& 2{\E^{-2r^2{s\over 1-t}}\over 1-t}\E^{-r^2} \nonumber \\
+  &=& 2\sum_{n=0}^\infty t^n L_n \E^{-r^2} \nonumber \\
+  &=& \sum_{n=0}^\infty (-t)^n \phi_n
+\end{eqnarray}
+但し、Laguerre多項式の母関数
+\begin{equation}
+ \sum_{n=0}^\infty t^n L_n={\E^{-{xt\over1-t}}\over 1-t}
+\end{equation}
+を用いた。$t^n$の係数を較べると式\ref{GMS-general-radial-solution}を得る。
+
+これらの解のそれぞれに$\lambda_i$をかけて足し合わせたもの解になっている。
+\begin{equation}
+ \label{GMSradial-solution}
+ \sum_{i=0}^\infty a_n \phi_n
+  \hspace{1cm} (a_n\in \{\lambda_1,\lambda_2,\ldots\} )
+\end{equation}
+
+更に、これらの解を$\ket{n}$の足に関して$U(\infty)$で回転してもまた異なる解
+を作ることができる。この$U(\infty)$の対称性とは即ち、
+\begin{equation}
+ \label{u-infinity-sym}
+ \left\{
+  \begin{array}{l}
+   \phi\rightarrow U\phi\Ud   \\
+   \crea\rightarrow U\crea\Ud \\
+   \anih\rightarrow U\anih\Ud \\
+  \end{array}
+ \right.
+ \Rightarrow 
+ {2\pi\theta\over g^2}\Tr V(\phi)
+\end{equation}
+というもので、オペレータの言葉で書かれた$\theta\rightarrow\infty$極限での
+ハミルトニアンを不変にしている。ここで$U\crea\Ud,U\anih\Ud$は$\xh,\yh$と
+の直接の関係が無いことに留意すべきである。その結果、運動項は$U(\infty)$
+の対称性を壊してしまうので、この$U(\infty)$の対称性は
+$\theta\rightarrow\infty$の極限でのみ存在する対称性である。
+
+結局こうして作られた解をオペレーターの言葉でみると
+\begin{equation}
+ \label{GMS2dim-solution} U \left(\sum_n a_n
+ \ket{n}\bra{n}\right)U^\dagger
+ \hspace{1cm}(a_n=\lambda_1,\lambda_2,\ldots)
+\end{equation}
+となり、これは一般にはエルミート演算子である。エルミート演算子は一般に非対
+角成分を持つので、(\ref{GMSradial-solution})のように回転対称性を持つとは限
+らない。即ち、(\ref{GMSmatrix})を思いだすと、$\crea$と$\anih$の数が一致し
+ないので、オーダリングを変えたところで$\crea$と$\anih$の数の差は変らず、
+$r^2\sim\crea\anih$のみの関数にはなり得ない。
+
+最後に、このようにして得られたソリトン解をいくつか図示してみる。
+
+\begin{enumerate}
+ \item \parbox[t]{130mm}{回転対称なソリトン解$\phi_3$\\
+       \begin{center}
+	$\phi_3=\begin{pmatrix}
+	  0 & 0 & 0 & 0 &\cdots \\
+	  0 & 0 & 0 & 0 & \cdots \\
+	  0 & 0 & 0 & 1 & \cdots \\
+	  \vdots & \vdots & \vdots & \dots & \ddots
+	 \end{pmatrix}=$\\
+	\includegraphics{GMS33.eps}
+       \end{center}}
+ \item \parbox[t]{130mm}{回転対称でないソリトン解I\\
+       \begin{center}
+	$\begin{pmatrix}
+	  0 & 0 & 1 & \cdots \\
+	  0 & 0 & 0 & \cdots \\
+	  1 & 0 & 0 & \cdots \\
+	  \vdots & \vdots & \vdots & \ddots
+	 \end{pmatrix}=$\\
+	 \includegraphics{GMS20.eps}
+       \end{center}}
+ \item \parbox[t]{130mm}{回転対称でないソリトン解II\\
+       \begin{center}
+	$\begin{pmatrix}
+	  0 & 0 & 0 & 0 & \cdots \\
+	  0 & 0 & 0 & 0 & \cdots \\
+	  0 & 0 & 0 & i & \cdots \\
+	  0 & 0 & -i & 0 & \cdots \\
+	  \vdots & \vdots & \vdots & \vdots &\ddots
+	 \end{pmatrix}=$\\
+	 \includegraphics{GMS23I.eps}
+       \end{center}}
+\end{enumerate}
+
+
+\subsubsection{高次元への拡張}
+
+これまでは2次元ユークリッド空間の場合を考えてきたが、それを$d+1$次元
+($+1$は時間)の場合に拡張する。ただし時間方向は非可換性に含まれないとする。
+場の理論で時間方向に非可換性を入れた場合、その拡張は簡単である。
+
+まず、$\theta^{\mu\nu}$は反対称行列であるが、適当な座標の直交変換によって
+\begin{equation}
+ \theta^{\mu\nu}=
+ \begin{pmatrix}
+  \AntiSymBlock{\theta_1}& \zero & \cdots & \zero \\
+  \zero & \AntiSymBlock{\theta_2}& \ddots & \vdots \\ 
+  \vdots & \ddots & \ddots & \zero \\
+  \zero & \cdots & \zero & \AntiSymBlock{\theta_{[d/2]}}\\
+ \end{pmatrix}
+\end{equation}
+となるようにすることができる。すると2次元の場合に帰着させることができる。
+こうして得られたソリトン解は、ただのソリトン解か自明な解
+($\phi(x)=\lambda_i$)の積になっている。
+
+\subsubsection{解の安定性}
+
+ソリトン解を得ることはできたが、これらのソリトンが安定なものとして存在して
+いるかどうかは自明ではない。それを確認する。
+
+今考えている理論は、(\ref{u-infinity-sym})で示したような$U(\infty)$の対称
+性をもっているのでそれを用いて、ソリトン解をオペレータの言葉で$\ket{n}$の
+基底について対角に持っていくことができる。そのときの解は、
+\begin{equation}
+ \label{radial-solution}
+ \begin{pmatrix}
+  a_1 & 0 & \cdots & \cdots & \cdots & \cdots & 0 \\
+  0 & a_2 & \ddots & \ddots & \ddots & \ddots & \vdots \\
+  \vdots & \ddots & \ddots &\ddots &\ddots & \ddots & \vdots \\
+  \vdots & \ddots & \ddots & a_n & \ddots & \ddots & \vdots \\
+  \vdots & \ddots & \ddots &\ddots & 0 &  \ddots &\vdots \\
+  \vdots & \ddots & \ddots &\ddots &\ddots & \ddots & \vdots \\
+  0 & \cdots & \cdots & \cdots & \cdots & \cdots & 0 \\
+ \end{pmatrix}
+\end{equation}
+のような形になっている。但し、$a_n$は先に述べたように、ポテンシャル$V$の停
+留点$\lambda_i$に値をとる。この解のエネルギーは
+\begin{eqnarray}
+ E &=& {2\pi\theta\over g^2}\Tr V(\phi) \nonumber \\
+   &=& {2\pi\theta\over g^2}\sum^\infty_{n=0}V(a_n)
+\end{eqnarray}
+となる。したがって、$a_n$がポテンシャル$V$の極小値であれば、摂動論的には安
+定であることが分かる。
+
+更に、$\theta\rightarrow\infty$の極限では、場のエネルギーが$\theta$に比例
+しているので、ポテンシャルの他の極小値や負の無限大へのトンネルは抑制される
+ので非摂動論的にも安定である。
+
+\subsubsection{$\theta$が有限の時のGMSソリトン}
+
+GMSソリトンは非可換場の理論特有の対象である。したがって、$\theta$を有限に
+してその絶対値を$0$にするとGMSソリトンは無くなってしまうことが予想される。
+それは事実であり、実際には$\theta$の減少に伴なってGMSソリトン解が無くなっ
+てしまうことが分かる。\cite{NCSolFinTheta}
+
+$\theta$が有限の時は、運動項を考えなくてはならない。まず、微分は座標のリ
+スケールの後、
+\begin{equation}
+ \left\{
+  \begin{array}{l}
+   \partial_x\rightarrow i[\yh,\cdot]
+    ={1\over\sqrt{2}}[\anih -\crea,\cdot]\\
+   \partial_y\rightarrow -i[\xh,\cdot]
+    =-i{1\over\sqrt{2}}[\anih +\crea ,\cdot]\\
+  \end{array}
+ \right.
+\end{equation}
+と書くことができる。すると、
+\begin{equation}
+ \int dxdy\, \1half\left(\partial_x\phi^2+\partial_y\phi^2\right)
+  =\pi \Tr ([\crea,\hat{\phi}][\anih,\hat{\phi}])
+\end{equation}
+ところで、この運動項は$\crea$や$\anih$を含んでいるので、先に述べた
+$U(\infty)$の対称性を壊してしまう。よって、回転対称な解に常に持っていける
+とは限らないが、ここでは回転対称な\ref{GMSradial-solution}のような解のみを
+考える。すると、オペレータの言葉で書かれたハミルトニアンは、
+\begin{equation}
+ \Ham =\sum_{n=0}^\infty {1\over 4}
+  [(2n+1)a_n^2-2(n+1)a_na_{n+1}]+\theta V(a_n)
+\end{equation}
+となる。古典的な解は
+\begin{equation}
+ {\partial\Ham\over\partial a_n}=0
+\end{equation}
+によって得ることができる。これは、
+\begin{equation}
+ \left\{
+  \begin{array}{ll}
+   (n+1)a_n-(2n+1)+na_{n-1}=2\theta V'(a_n)\hspace{5mm}& (n\geq1) \\
+   a_1-a_0=2\theta V'(a_0)\hspace{5mm}& (n=0\hbox{に対応}) \\
+  \end{array}
+\right.
+\end{equation}
+という無限個の差分方程式になる。各式を$N$まで足し合わせると、$\theta$有
+限の時の回転対称なソリトン解のオペレーターによる表現の対角成分
+$a_n$の満たすべき式の最終形は、
+\begin{equation}
+ \label{finite-theta-equation}
+ a_{N+1}-a_N={2\theta\over N+1}\sum^N_{n=0} V'(a_n)
+\end{equation}
+という式になる。更に、エネルギーが有限であることを要求すると、
+\begin{equation}
+ \label{finite-theta-convergence-condition}
+ \left\{
+ \begin{array}{l}
+  a_n\rightarrow0\quad(n\rightarrow\infty)\\
+  \sum\limits_{n=0}^\infty V'(a_n)<\infty \\
+ \end{array}\right.
+\end{equation}
+という必要条件がでる。
+
+ここで、$\theta$を$0$に近づけることを考えてみる。GMSソリトンは時空の非可
+換性があって始めて存在するものであることから、$\theta\rightarrow 0$でGMS 
+ソリトンは消えてしまうはずである。設定として、$T=0$を真の真空にとって考
+える。(\ref{finite-theta-equation})を見ると、$\theta$は$a_n$が動く幅を規
+定していることが分かる。$\theta$が十分小さい時は、$a_n$ の変化が非常に小
+さいので式(\ref{finite-theta-equation})の右辺は積分として良い近似になる。
+即ち、
+\begin{align}
+ a_{n+1}-a_n\simeq 2\theta\int^{a_n}_{a_0}da\, V'(x)&=2\theta(V(a_n)-V(a_0))
+  \nonumber\\
+ &\xrightarrow{n\rightarrow\infty}-2\theta V(a_0)
+\end{align}
+となる。よって、(\ref{finite-theta-convergence-condition})を満たす為には、
+$V(a_0)=0$即ち$a_0=0$でなくてはならない。しかし、この初期条件で差分
+方程式(\ref{finite-theta-equation})を解くと、自明な解しか与えない。よっ
+て、$\theta$が十分小さくて、差分方程式(\ref{finite-theta-equation})の右
+辺の和を積分として見ることができるときは、自明な解しか無いことが分かった。
+
+これ以上の議論を進めるためには具体的にポテンシャルの形を与えて数値的な計
+算を行なわなくてなならない。ポテンシャルの形を与えて数値的に解析した議論
+は\cite{NCSolFinTheta}でなされている。
+
+\subsubsection{$\theta$が有限でゲージ場がある時}
+
+上で見たように、スカラー場だけの時には$\theta$有限で非自明な解を構成しよ
+うとしても結局差分方程式に帰着するのみだが、ゲージ場が存在する時には運動
+項が入っていても$U(\infty)$の対称性が回復する\footnote{$U( \infty)$の無
+限小変換$1+\lambda$($\lambda$:Hermite)に対して$A_\mu \rightarrow A+
+\partial_\mu\lambda$とすればよい。}ので、解析的な厳密解を構成することが
+できる。
+
+まず、具体的な解を求める前にオペレーター形式で$U(\infty)$対称性が存在す
+る時にソリトン解を構成する一般的な方法\cite{ExactNCSol}について説明する。
+
+今、Hilbert空間に作用する演算子$U$を考えると、$U$の作用は
+\begin{equation}
+ \begin{split}
+  \ket{\psi}\rightarrow U\ket{\psi} \\
+  \bra{\psi}\rightarrow \bra{\psi}\Ud \\
+  \OpO\rightarrow U\OpO\Ud
+ \end{split}
+\end{equation}
+となる。もし$U$がisometryである即ち
+\begin{equation}
+ \label{isometry}
+  U\Ud=1
+\end{equation}
+を満たし、しかしながらユニタリではならば、変換$U$によって運動方程式の解
+は別の解へと変換される。($U$がユニタリならば本質的に同じ解へと変換される。)
+何故ならば、物理的自由度を表わす演算子等を含む一般の演算子に対して
+\begin{equation}
+ \frac{\delta S}{\delta \OpO}\rightarrow
+  U\frac{\delta S}{\delta \OpO}\Ud
+\end{equation}
+となるから、経路積分の極値を与えるような配位を別の経路積分の極値を与える
+ような配位に変換するからである。このような変換$U$をsolution generating
+transformation という。
+
+ここで、Hilbert空間として1個の調和振動子が成すFock空間を考える。shift
+operator$S$、
+\begin{equation}
+ \label{shift-operator}
+ S\equiv\sum^\infty_{k=o}\ket{k+1}\bra{k}
+\end{equation}
+は、
+\begin{equation}
+ \Sd^nS^n=1,\quad S^n\Sd^n=1-P_n
+\end{equation}
+という関係を満たす。但し、
+\begin{equation}
+ P_n=\sum^{n-1}_{k=0}\ket{k}\bra{k}
+\end{equation}
+である。$S^n$は式(\ref{isometry})を満たすのでsolution generation
+transformationである。今$S^n\Sd^n$はHilbert空間の$\ket{0}\sim\ket{n-1}$ 
+に於いてのみユニタリ変換でない。$\ket{n}$は半径$\sqrt{n\theta}$の領域に
+対応していたから、解生成変換$S^n$によって、半径$\sqrt{n\theta}$の非可換
+ソリトンを作ることができると考えることができる。
+
+具体的な計算に移ると、今考える作用は
+\begin{equation}
+ \int dxdy\, \left(\1half(F_{xy})^2
+	      +\1half D^\mu\phi D_\mu\phi -V(\phi)\right)
+\end{equation}
+である。これを座標のリスケールの後に、オペレーターの言葉に書き直す。便宜
+の為、ゲージ場は次のように表記することにする。
+\begin{equation}
+ A\equiv A_z=-\frac{i}{\sqrt{2}}(A_x-iA_y),\quad
+  \Ab\equiv A_{\zb}=-\frac{i}{\sqrt{2}}(A_x+iA_y)
+\end{equation}
+次に共変微分をオペレーターの言葉で書くことを考える
+\begin{equation}
+ \creC\equiv \anih+i\theta^{\1half}A,\quad
+  \aniC\equiv \crea-i\theta^{\1half}\Ab
+\end{equation}
+とすると、
+\begin{eqnarray}
+ \frac{1}{\sqrt{2}}[D_x-iD_y,\phi]=-[\aniC,\phi]
+ \frac{1}{\sqrt{2}}[D_x+iD_y,\phi]=[\creC,\phi]
+\end{eqnarray}
+この共変微分を使ってfield strengthはオペレーターの言葉で次のように書ける。
+\begin{equation}
+ F\equiv -F_{xy}=-i[\crea,\Ab]-i[\anih,A]+\theta^{\1half}[A,\Ab]
+  =\theta^{-\1half}([\aniC,\creC]+1)
+\end{equation}
+結局、オペレーター形式で書かれたハミルトニアンは
+\begin{equation}
+ \Ham=2\pi\Tr\left(\1half([\aniC,\creC]+1)^2
+		 +[\aniC,\phi][\creC,\phi]
+		 +\theta V(\phi)\right)
+\end{equation}
+となる。この系の自明な解は$\phi_*$を$V(\phi)$の極小値を与える$\phi$の値
+とし、更に$V(\phi_*)=0$すれば、
+\begin{equation}
+ \begin{split}
+  \phi&=\phi_*\\
+  A&=0\Rightarrow \creC=\anih,\,\aniC=\crea
+ \end{split}
+\end{equation}
+である。これを先のsolution generating transformationによって別の解に写すと、
+\begin{equation}
+ \begin{split}
+  \phi&=\phi_*(1-P_n) \\
+  \creC&=S^n\anih\Sd^n,\,\aniC=S^n\crea\Sd^n
+ \end{split}
+\end{equation}
+となる。これは非自明な解である。この時field strengthは、
+\begin{equation}
+ F=\theta^{-\1half}([\creC,\aniC]-1)=\theta^{-\1half}(S^n\Sd^n-1)
+  =\theta^{-\1half}P_n
+\end{equation}
+であり、$[\creC,S^n\Sd^n]=0$となるから、この解の持つエネルギーは
+\begin{equation}
+ E=2\pi n\left(\frac{1}{2\theta}+\theta V(0)\right)
+\end{equation}
+となる。

@@ -1,0 +1,85 @@
+%#!platex master.tex
+\nocite{IwanamiKisoHom}
+
+\section{圏の定義}
+\begin{Def}[圏]
+ 
+ 圏は対象\footnote{本論の文章での「対象」はこの意味で用いている訳ではな
+ く、一般名詞の「対象」である。} (object)と射(morphism)という2つの構成要
+ 素からなりmorphismは次の4つの性質を満たす。
+ \begin{enumerate}[C1]
+  \item 射$f$について始域(domain)$\Dom f$と終域(codomain)$\CoD f$と呼ばれ
+	る二つの対象が存在している。これをまとめて
+	\begin{equation}
+	 \Dom f \xrightarrow{f} \CoD f
+	\end{equation}
+	と表記する。
+  \item 全ての対象Aに対して射$1_A$が存在してその始域と終域はAである。この
+	ような射は恒等射と呼ばれる。
+  \item 2つの射$f,g$があって$\Dom f = \CoD f$の時、射$h$で$\Dom h= \Dom
+	f$かつ$\CoD h = \CoD g$となるようなものが存在する。このような射
+	$h$を合成(composite)といい、このような射を$f \circ g$と書く。
+  \item 上で定義した合成について結合則が成り立つ。即ち
+	\begin{equation}
+	 f \circ (g \circ h)=(f \circ g)\circ h
+	\end{equation}
+  \item 恒等射との合成はそれ自身である。即ち、$ A \xrightarrow{f} B$に対し、
+	\begin{equation}
+	 1_A \circ f = f,f \circ 1_B=f
+	\end{equation}
+	である。
+ \end{enumerate}
+\end{Def}
+
+この論文で現われる圏の具体例としては以下のようなものがある。
+\begin{figure}[ht]
+ \begin{center}
+ \begin{tabular}{|c|c|c|}\hline
+ 圏の名前&対象     &射 \\ \hline
+ コンパクト空間の圏&コンパクト空間&連続写像\\ \hline
+ $\Cst$環の成す圏&$\Cst$環 &$*$-写像 \\ \hline
+ \end{tabular}
+ \end{center}
+ \caption{この論文で現われる圏のカタログ}
+\end{figure}
+
+\section{関手}
+関手とは圏としての構造をある程度保存するような圏から圏への写像である。
+\begin{Def}[共変関手]
+ \label{functor}
+ 2つの圏$\CatB,\CatC$に対して$\CatB$から$\CatC$への関手$F$は$\CatB$の対象
+ \ten 射を$\CatC$の対象\ten 射に写すもので次の性質を満たす。
+\begin{enumerate}[F1]
+ \item $A\in \Ob(\CatB)$として$F(1_A)=1_{F(A)}$
+ \item $f,g\in \Hom(\CatB)$として$F(g\circ f)=F(g)\circ F(f)$
+\end{enumerate}
+このことを
+\begin{equation}
+ F:\CatB \rightarrow \CatC
+\end{equation}
+と書く。
+\end{Def}
+\begin{Def}[反変関手]
+ \label{cofunctor}
+ 定義は共変関手とほぼ同じであるが写像の合成の仕方が逆になる。即ち、
+ \begin{enumerate}[cF1]
+  \item $A\in \Ob(\CatB)$として$F(1_A)=1_{F(A)}$
+  \item $f,g\in \Hom(\CatB)$として$F(g\circ f)=F(f)\circ F(g)$
+ \end{enumerate}
+\end{Def}
+更に、関手によって映された射$i$が共変関手によって映された場合を$i_*$反変
+関手によって映された場合を$i^*$と書くことが多い。
+
+\section{圏同値}
+圏同値とは、おおざっぱにいって数学的な対象として同じものであるということ
+である。
+
+\begin{Def}[圏同値]
+ 2つの圏$\CatB,\CatC$について、次の性質を満たす2つの関手
+ $\CatB\xrightarrow{F}\CatC,\CatC\xrightarrow{G}\CatB$が存在するとき圏
+ $\CatB$と$C$は圏同値であるという。
+\begin{eqnarray}
+ G\circ F\simeq I_\CatB\mbox{(恒等関手)} \\ F\circ G\simeq
+ I_\CatC\mbox{(恒等関手)}
+\end{eqnarray}
+\end{Def}

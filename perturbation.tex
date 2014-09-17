@@ -1,0 +1,303 @@
+%#! platex master.tex
+
+非可換場の理論での摂動論は主に$\theta$が一定の場合のみが研究されているの
+でSeibergらの仕事\cite{NCPertDyn}\cite{ComNCPertDyn}に従って$\theta$が
+一定の場合のみを考える事にする。
+  
+先ずは、$d$次元のスカラー場の理論で考えることにする。さらに一定な非可換
+性
+\begin{equation}
+ [x^\mu ,x^\nu]=i\theta^{\mu\nu}
+\end{equation}
+を導入する。但しこの非可換性は、空間的方向同士に限るとする。すなわち
+  \begin{equation}
+   \theta^{0\mu}=0
+  \end{equation}
+  
+  この空間の非可換性を導入することは空間上の場の成す環を変形することと同じ
+  である。この変形によって場の積が普通の積からMoyal積になる。
+  \begin{equation}
+   \label{moyal-product}
+  (\phi_1\star\phi_2)(x)=\E^{\ihalf\theta^{\mu\nu}
+  \partial_\mu^y\partial_\nu^z}\phi_1(y)\phi_2(z)\Big|_{y=z=x}
+  \end{equation}
+
+  ラグランジアンの中の相互作用項を可換時空の上での相互作用項と比較すると、
+  \begin{equation}
+   \label{ncinteraction} \int d^d \phi^n \rightarrow \int
+   d^d\overbrace{\phi\star\cdots\star\phi}^{\mbox{n個}}
+  \end{equation}
+  のようになる。すると、非可換時空の場の理論でのファインマンダイアグラムを
+  計算を可換時空でのファインマンダイアグラムの計算と比較すると、非可換時空
+  では(\ref{ncinteraction})の相互作用項に対応するバーテックスの関係を求
+  めると、位相の寄与が加わることが分かる。$k\times l$を
+  \begin{equation}
+   k\times l \equiv k_\mu \theta^{\mu \nu} l_\nu
+  \end{equation}
+  の略記とすれば、Moyal積の結合性を用いて、
+  \begin{align}
+   V_{\mbox{\small 非可換}} (k_1,\ldots ,k_n)
+    &=\phi_1(k_1)\star(\phi_2(k_2)\star(\phi_3(k_3)
+   \cdots\star(\phi_n(k_n))\cdots)) \nonumber\\
+    &=\phi_1(k_1)(\phi_2(k_2)\star(\phi_3(k_3)\star(\phi_4(k_4)\cdots\star
+     (\phi_n(k_n))\cdots)))\E^{-\ihalf\sum_{i\geq 2}k_1\times k_i}\nonumber\\
+    &=\cdots\cdots\nonumber\\
+    &=V_{\mbox{\small 可換}}
+   (k_1,\ldots ,k_n) \times \E^{-\ihalf\sum_{i<j} k_i \times k_j}
+  \end{align}
+  この性質を用いて非可換場の理論の計算を行なうと、非可換場の
+  理論の摂動計算に現れるファインマンダイアグラムはプラナーダイアグラムとノ
+  ンプラナーダイアグラムの2種類に分類することができることが知られている。
+  まずそれぞれの性質について見る。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{プラナーダイアグラム}
+   \begin{figure}[h]
+    \begin{minipage}[b]{70mm}
+     \begin{center}
+      \includegraphics{planarB.eps} \caption{もとのダイアグラム}
+      \label{planarA}
+     \end{center}
+    \end{minipage}
+    \begin{minipage}[b]{70mm}
+     \begin{center}
+      \includegraphics{planarA.eps} \caption{2重線化したダイアグラム}
+      \label{planarB}
+     \end{center}
+    \end{minipage}
+   \end{figure}
+   プラナーなダイアグラムとは、2次元の平面に投影した際に交叉するリンクを持
+   たないダイアグラムのことである。このようなダイアグラムのバーテックスへ
+   の非可換性から来る位相の寄与を計算する為に次のようなテクニックを用いる。
+   ダイアグラムがこのような性質をもつ時、ダイアグラムを2重線のダイアグラム
+   でかつループが交わらないように書く事ができる(図\ref{planarB})。この2重
+   線の線の1本1本に運動量を割り振って、2重線の2本の線の運動量の合計がリン
+   クを2重にする前の運動量になるようにする。すなわち、上の図 
+   \ref{planarA}の例に於いては
+   \begin{equation}
+    \left\{
+     \begin{array}{l}
+      \vk_1=\vl_1-\vl_2 \\ \vk_2=\vl_2-\vl_3 \\ \vk_3=\vl_3-\vl_1 \\
+     \end{array}
+   \right.
+   \end{equation}
+   のようにして図\ref{planarB}を書くことができる。すると、各バーテックス
+   の位相の寄与は $\vk_i$をバーテックスに入って来るリンクの運動量とすると
+   (添字は半時計回りにふる)、
+   \begin{eqnarray}
+    -\ihalf\sum_{i<j}\vk_i\times\vk_j &=& -\ihalf\sum_{i<j}
+    (\vl_{i+1}-\vl_i)\times(\vl_{j+1}-\vl_j) \nonumber \\ &=&
+    -\ihalf\sum_i (\vl_{i+1}-\vl_i)\times(\vl_n-\vl_{i+1}) \nonumber \\
+    &=& -\ihalf\left(\vl_1\times\vl_2+\cdots
+    +\vl_{n-1}\times\vl_{n}+\vl_{n}\times\vl_{1}\right)
+   \end{eqnarray}
+   のように書くことができる。$(\vl_{i+1}-\vl_i)$は各バーテックスのリンクの
+   運動量に相当する。この寄与が各バーテックスについて存在することを考える
+   と、各リンクの両端のバーテックスで位相の寄与が相殺し合うので結局プラナー
+   なダイアグラムに対しては時空の非可換化による位相の寄与は無いと結論付け
+   られる。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{ノンプラナーダイアグラム}
+  \begin{figure}[h]
+   \begin{minipage}[b]{70mm}
+    \input{nonplanarA.pstex_t} \caption{交叉したダイアグラム}
+    \label{nonplanarA}
+   \end{minipage}
+   \begin{minipage}[b]{70mm}
+    \input{nonplanarB.pstex_t} \caption{交叉をバーテックスとする。}
+    \label{nonplanarB}
+   \end{minipage}
+  \end{figure}
+  ノンプラナーなダイアグラムの場合バーテックスではない交叉するリンクが存在
+  する。ノンプラナーなダイアグラムへの、非可換性による位相の寄与を計算する
+  場合はテクニックとして、交叉している所をバーテックスと見倣してプラナーな
+  ダイアグラムに置き換える。この時、新たに加わったバーテックスからの寄与は、
+  $\E^{-i\vk_1\times\vk_2}$である。プラナーなダイアグラム全体の位相の寄与
+  は$0$だったので、ノンプラナーなダイアグラムへの位相の寄与は各々の交叉当
+  り
+  \begin{equation}
+   \E^{i\vk_1\times\vk_2}
+  \end{equation}
+  となる。
+
+  さらに、ノンプラナーなダイアグラムの場合リンクを交叉させる方法をどうす
+  るかにダイアグラムが依存しないことをチェックしておく必要がある。このこ
+  とは簡単に確かめることができる。即ち、リンクを交叉させる位置を変化させ
+  ても各バーテックスで運動量は保存しているのでダイアグラムの位相はリンク
+  の交叉のさせ方に依らない。このことは、Felderらの変形量子化の方法
+  \cite{PathIntQuant}で経路積分から非可換場の理論がうまく定義できている
+  という事実からも予想できることである。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{4次元$\phi^4$理論の1-ループ計算}
+  \label{phi4}
+
+  以上の事実を用いて、4次元$\phi^4$理論の2点関数を1-ループのオーダーで計算
+  する。考える理論のラグランジアンは次で与えられる。
+  \begin{equation}
+   {\mathrm S}=\int d^4x\,\left(\1half(\partial_\mu\phi)^2+\1halfm^2\phi^2
+   +{1\over4!}g^2\phi\star\phi\star\phi\star\phi\right)
+  \end{equation}
+  運動項と質量項の積がMoyal積になっていないのはMoyal積による運動項と質量項
+  への補正が全微分になるからである。この事実の証明は\ref{nature}節で与える。
+
+  この理論の2点関数への1-ループオーダーでの補正は、プラナーなダイアグラムと
+  ノンプラナーなダイアグラムがそれぞれ1つづつある。
+  \begin{figure}[ht]
+   \begin{minipage}[b]{70mm}
+    \input{phi4-planar.pstex_t} \caption{プラナーなダイアグラム}
+    \label{phi4-planar}
+   \end{minipage}
+   \begin{minipage}[b]{70mm}
+    \input{phi4-nonplanar.pstex_t} \caption{ノンプラナーなダイアグラム}
+    \label{phi4-nonplanar}
+   \end{minipage}
+  \end{figure}
+  それぞれのダイアグラムの計算をSchwingerパラメータの方法で計算すると、
+  \begin{eqnarray}
+   \Gamma^{(2)}_{\mathrm{1-loop,planar}} &=& 
+    {g^2\over 3(2\pi)^4} \int {d^4k \over k^2+m^2} \nonumber \\
+   &=& {g^2\over 48\pi^2}\int^{\infty}_0 {d\alpha\over \alpha^2}\,
+    \E^{-\alpha m^2}   \\
+   \Gamma^{(2)}_{\mathrm{1-loop,non-planar}} &=&
+    {g^2\over 3(2\pi)^4}\int {d^4k \over k^2+m^2}
+    \E^{\vp\times\vk} \nonumber \\
+   &=& {g^2\over 96\pi^2}\int^{\infty}_0
+    {d\alpha\over \alpha^2}\, \E^{-\alpha m^2 -{p\circ p\over 4\alpha}}
+  \end{eqnarray}
+  この計算では、Schwingerパラメータによる計算に基本的な式
+  \begin{equation}
+   {1\over k^2+m^2}=\int^\infty_0 d\alpha\, \E^{-\alpha(k^2+m^2)}
+  \end{equation}
+  及び、これも良く知られた基本的な式
+  \begin{equation}
+   \int{d^d\vk\, \E^{A\vk\cdot\vk +\vec{B}\cdot\vk+C}}=
+    \left({\pi\over A}\right)^{d\over 2} \E^{{\vec{B}\cdot\vec{B}\over 4A}+C}
+  \end{equation}
+  を用いた。
+  
+  ここで積分を収束させる為に各ダイアグラムに$\exp\left(-1\over \Lambda^2
+  \alpha\right)$を掛ける。すると各ダイアグラムの発散の部分を計算すると、
+  \begin{align}
+   \Gamma^{(2)}_{\mathrm{1-loop,planar}} &=
+    {g^2\over 48\pi^2}\int^\infty_0 {d\alpha\over \alpha^2}
+    \E^{-\alpha m^2 - {1\over \Lambda^2\alpha}} \nonumber \\
+   &= {g^2\over 48\pi^2}
+    \left(\Lambda^2-m^2\ln({\Lambda^2\over m^2})\right) \\
+   \Gamma^{(2)}_{\mathrm{1-loop,nonplanar}} &=
+    {g^2\over 96\pi^2}\int^\infty_0 {d\alpha\over \alpha^2}
+    \E^{-\alpha m^2 - {1\over (p\circ p/4 + \Lambda^2)\alpha}} \nonumber \\
+   &= {g^2\over 48\pi^2}
+    \left(\Lambda^2_{\mathrm{eff}}
+     -m^2\ln({\Lambda^2_{\mathrm{eff}}\over m^2})\right)
+  \end{align}
+  となる。ここで、
+  \begin{equation}
+   p \circ q = \left|p_\mu \theta^{\mu\rho}\delta_{\rho\sigma}
+		\theta^{\sigma\nu} q_\nu \right|
+  \end{equation}
+  \begin{equation}
+   \Lambda^2_{\mathrm{eff}}={1\over {1\over\Lambda^2}+p\circ p}
+  \end{equation}
+  である。以上の計算の結果、有効作用は次のようになる。
+  \begin{align}
+       S_{\mathrm{1PI}}^{(2)} =
+	\frac{1}{(2\pi)^2}\int d^4p\, \1half\biggl( p^2 +M^2
+	+{g^2\over 96\pi^2(p\circ p/4+{1\over{\Lambda^2}})}
+	-{g^2M^2\over 96\pi^2}\ln\left(1\over{M^2\left(p\circ p/4
+		+{1\over\Lambda^2}\right)}\right) \nonumber \\
+	+\cdots +\mathcal{O}(g^4)\biggl)\phi(p)\phi(-p)
+  \end{align}
+  但し$M$はplanarなダイアグラムで繰り込まれた質量、
+  \begin{equation}
+   M^2=m^2+{g^2\Lambda^2\over 48\pi^2}
+    -{g^2m^2\over 48\pi^2}\ln\left({\Lambda^2\over m^2}\right)
+  \end{equation}
+  である。
+
+  この時、$\Lambda\rightarrow\infty$なる極限操作と$p\rightarrow0$という極
+  限操作が交換しないことが分かる。即ち、$1\over \Lambda^2$と$p\circ p$の大
+  小で場合分けをして、それぞれの場合で$\Lambda\rightarrow\infty$極限をとる
+  と、振舞いが異なる。具体的には、
+  \begin{enumerate}[a)]
+   \item $p\circ p\ll{1\over\Lambda^2}$の時\\
+	 有効作用は、非可換ではない場の理論と同じものになる。すなわち
+	 \begin{equation}
+	  S^{(2)}_{\mathrm{PI}}
+	   \simeq \int d^4p\, \1half(p^2+{M'}^2)\phi (p)\phi (-p)
+	 \end{equation}
+	 となる。但し$M'$は非可換$\phi^4$理論での繰り込まれた質量である。
+	 \begin{equation}
+	 {M'}^2=M^2+{3g^2\Lambda^2\over 96\pi^2}
+	  -{3g^2m^2\over96\pi^2}\ln\left({\Lambda^2\over m^2}\right)
+	  +\cdots
+	 \end{equation}
+	 これは$M$と発散部分の係数を異にするので、$M$に対して入れたカウン
+	 タータームは$M'$の発散を吸収できない。
+   \item $p\circ p\gg {1\over\Lambda^2}$の時\\
+	 有効作用は、
+	  \begin{equation}
+	   S^{(2)}_{\mathrm{1PI}}
+	    =\frac{1}{(2\pi)^2}\int d^4p\, \1half\left(p^2+M^2
+		+{g^2\over 24\pi^2p\circ p}
+		-{g^2M^2\over24\pi^2}\ln\left({1\over m^2 p\circ p}\right)
+		+\cdots +\mathcal{O}(g^4)\right)\phi(p)\phi(-p)
+	  \end{equation}
+	 となる。これは、a)の場合と$\Lambda\rightarrow\infty$での発散の振
+	 舞いを異にしている。
+  \end{enumerate}
+  今、見たように、紫外極限$\Lambda\rightarrow\infty$と赤外極限
+  $p\rightarrow0$が互いに交換しないということは、赤外発散と紫外発散が混合
+  しているということであり、UV/IR mixingと呼ばれている。
+
+\subsection{6次元$\phi^3$模型の1-loop計算}
+
+\begin{figure}
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{phi-3-planar.pstex_t}
+   \caption{planarなダイアグラム}
+   \label{phi3-planar}
+  \end{center}
+ \end{minipage}
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{phi-3-nonplanar.pstex_t}
+   \caption{non-planarなダイアグラム}
+   \label{phi3-nonplanar}
+  \end{center}
+ \end{minipage}
+\end{figure}
+同様の計算を$\phi^3$模型で繰り返す。$\phi^3$模型の2点関数では1-loopのオー
+ダーで図\ref{phi3-planar}\ten 図\ref{phi3-nonplanar}のふたつのダイアグラ
+ムが効いてくる。
+
+考える作用は
+\begin{equation}
+ S=\int d^6x\left(\1half(\partial_\mu\phi)^2+\1half m^2
+	     +\frac{g}{3!}\phi\star\phi\star\phi\right)
+\end{equation}
+である。これをまた前小節と同じ計算を繰り返すと、
+\begin{align}
+ \Gamma^{(2)}_{\mathrm{1-loop,nonplanar}} & =
+ {g^2\over 2^8\pi^6}\int^\infty_0
+ \frac{d\alpha_1d\alpha_2}{(\alpha_1+\alpha_2)^3}
+ \E^{-(\alpha_1+\alpha_2) m^2-\frac{\alpha_2^2p^2-p\circ
+ p\diagup 4+1\diagup\Lambda^2}{\alpha_1+\alpha_2}} \\
+ \Gamma^{(2)}_{\mathrm{1-loop,planar}} &=
+ \Gamma^{(2)}_{\mathrm{1-loop,nonplanar}}\Big|_{\theta=0}
+\end{align}
+となる。
+
+よって有効作用は、
+\begin{multline}
+ \label{phi3-eff}
+ S^{(2)}_{\mathrm{1PI}}=\int d^6p\1half\Big(p^2+M^2
+	+\frac{g^2}{2^8\pi^2p\circ p}\\
+	+\frac{g^2}{2^93\pi^3}\left(6M^2-\frac{p^2}{4}\right)
+	 \ln\left(\frac{1}{M^2p\circ p}\right)\Big)
+ \phi_R(p)\phi_R(-p)
+\end{multline}
+となる。ここで$M,\phi_R$はplanarなダイアグラムで繰り込まれた質量と$\phi$
+である。

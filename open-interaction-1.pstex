@@ -1,0 +1,137 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: open-interaction-1.pstex
+%%Creator: fig2dev Version 3.2 Patchlevel 3a
+%%CreationDate: Tue Jan  2 13:53:27 2001
+%%For: kent@ewan (Kent Ichikawa,,,)
+%%BoundingBox: 0 0 193 76
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 76 moveto 0 0 lineto 193 0 lineto 193 76 lineto closepath clip newpath
+-5.0 86.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+%%Page: 1 1
+10 setmiterlimit
+ 0.06299 0.06299 sc
+% Polyline
+15.000 slw
+n 112 334 m 113 334 l 117 333 l 122 331 l 131 328 l 143 324 l
+ 158 319 l 177 314 l 199 307 l 223 300 l 250 293 l
+ 278 285 l 308 278 l 340 270 l 374 263 l 409 256 l
+ 445 250 l 485 244 l 526 238 l 570 233 l 618 229 l
+ 669 226 l 722 224 l 777 223 l 832 224 l 885 226 l
+ 936 229 l 984 233 l 1028 238 l 1070 244 l 1109 250 l
+ 1146 256 l 1181 263 l 1214 270 l 1246 278 l 1276 285 l
+ 1305 293 l 1332 300 l 1356 307 l 1378 314 l 1397 319 l
+ 1412 324 l 1424 328 l 1433 331 l 1438 333 l 1442 334 l
+
+ 1443 334 l gs col0 s gr 
+% Polyline
+n 1775 334 m 1776 334 l 1780 335 l 1785 337 l 1794 340 l 1806 344 l
+ 1821 349 l 1840 354 l 1862 361 l 1886 368 l 1913 375 l
+ 1941 383 l 1971 390 l 2003 398 l 2037 405 l 2072 412 l
+ 2108 418 l 2148 424 l 2189 430 l 2233 435 l 2281 439 l
+ 2332 442 l 2385 444 l 2440 445 l 2495 444 l 2548 442 l
+ 2599 439 l 2647 435 l 2691 430 l 2733 424 l 2772 418 l
+ 2809 412 l 2844 405 l 2877 398 l 2909 390 l 2939 383 l
+ 2968 375 l 2995 368 l 3019 361 l 3041 354 l 3060 349 l
+ 3075 344 l 3087 340 l 3096 337 l 3101 335 l 3105 334 l
+
+ 3106 334 l gs col0 s gr 
+% Polyline
+n 334 1221 m 335 1221 l 339 1220 l 344 1218 l 353 1215 l 365 1211 l
+ 380 1206 l 399 1201 l 421 1194 l 445 1187 l 472 1180 l
+ 500 1172 l 531 1165 l 562 1157 l 596 1150 l 631 1143 l
+ 668 1137 l 707 1131 l 748 1125 l 793 1120 l 840 1116 l
+ 891 1113 l 944 1111 l 999 1110 l 1054 1111 l 1106 1113 l
+ 1153 1115 l 1194 1118 l 1228 1122 l 1256 1126 l 1278 1129 l
+ 1295 1133 l 1308 1136 l 1318 1140 l 1325 1143 l 1331 1147 l
+ 1338 1151 l 1345 1155 l 1355 1159 l 1367 1163 l 1384 1168 l
+ 1407 1174 l 1435 1180 l 1469 1187 l 1510 1195 l 1557 1203 l
+ 1609 1212 l 1664 1221 l 1719 1230 l 1771 1239 l 1818 1247 l
+ 1859 1255 l 1893 1262 l 1922 1268 l 1944 1274 l 1961 1279 l
+ 1974 1283 l 1983 1287 l 1991 1291 l 1997 1295 l 2003 1299 l
+ 2011 1302 l 2020 1306 l 2033 1309 l 2050 1313 l 2072 1316 l
+ 2101 1320 l 2135 1324 l 2176 1327 l 2223 1329 l 2275 1331 l
+ 2330 1332 l 2385 1331 l 2438 1329 l 2489 1326 l 2537 1322 l
+ 2581 1317 l 2622 1311 l 2662 1305 l 2698 1299 l 2733 1292 l
+ 2767 1285 l 2799 1277 l 2829 1270 l 2857 1262 l 2884 1255 l
+ 2908 1248 l 2930 1241 l 2949 1236 l 2964 1231 l 2976 1227 l
+ 2985 1224 l 2990 1222 l 2994 1221 l
+ 2995 1221 l gs col0 s gr 
+$F2psEnd
+rs

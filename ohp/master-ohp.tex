@@ -1,0 +1,502 @@
+%#!platex master-ohp.tex
+\documentclass{slides}
+\input{predef}
+
+\begin{document}
+\gtfamily
+\mdseries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ \Large
+ 修士論文(の予定)\\
+ \Huge
+ 弦理論の\\非可換幾何学的側面\\
+\end{center}\vspace{2cm}
+%\begin{minipage}[c]{100mm}
+% \large
+% \begin{center}
+%  {\color{blue} Table of Contents}\\
+% \end{center}
+% \includegraphics{toc1.eps}
+% \includegraphics{toc2.eps}
+% \includegraphics{toc3.eps}
+%\end{minipage}
+%$\Rightarrow$
+%\parbox[c]{40mm}{
+%\color{red}\baselineskip=3mm
+%ちょっと、色々なtopicを書きすぎた!}
+%
+%\begin{center}
+% \vfill 話を{\color{red}大幅}に削らないと時間が足りない!!!
+%\end{center}
+%\newpage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ \ovalbox{\Large \rmfamily\scshape Plan of This Talk}
+\end{center}\vspace{-1cm}
+\begin{enumerate}[\hspace{2cm}\S1.]
+ \item \NCG とは?\vspace{-1cm}
+ \item 何故\NCG なのか?\vspace{-1cm}
+ \item \NCG を使ってみる。\vspace{-1cm}
+ \item 弦理論に現われる\NCG\vspace{-1cm}
+ \item \NCS とD-brane\vspace{-1cm}
+ \item 結論\vspace{-1cm}
+\end{enumerate}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ {\Large \S1. \NCG とは?}
+
+\vspace{1cm}
+Connes流の定義\\ (もとのアイディアはvon Neumann)
+\begin{tabular}{rcl}
+ \ovalbox{\parbox{5cm}{可換環\\ =多様体の上の関数(場)}}&
+ \shortstack{Gel'fandの定理\\ $\Longleftrightarrow $}&
+ \ovalbox{\parbox{5cm}{多様体}}\\
+ \\
+ \ovalbox{\parbox{5cm}{非可換な$C^*$環に拡張}}&
+ $\Longleftrightarrow $ &
+ \ovalbox{\parbox{5.5cm}{何が対応するか?\\ $\Rightarrow $\NCG !!}}
+\end{tabular}
+\end{center}
+
+\vspace{1cm}
+\begin{minipage}[t]{9cm}
+ \begin{center}
+  \NCG にもあるもの
+ \end{center} 
+ \color{blue}
+ \begin{itemize}
+  \item 開部分群$\leftrightarrow$イデアル
+  \item 閉部分群$\leftrightarrow$商環
+  \item 微分形式
+  \item 接続と曲率
+  \item 指数定理
+ \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{8cm}
+ \begin{center}
+ \NCG には一般にないもの
+ \end{center} 
+ \color{magenta}
+ \begin{itemize}
+  \item 点
+  \item メトリック
+  \item ラプラシアン
+ \end{itemize}
+\end{minipage}
+
+\begin{center}
+この定義は物理としては少し抽象的すぎる気が...
+\end{center}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ \Large \S2. 何故\NCG なのか?
+\end{center}
+
+もう少し具体的に非可換幾何学を構成する方法はないものか?
+$\Rightarrow$\Ovalbox{\DFM}\\
+\DFM とは、我々のスケールの物理を変えずに小さなスケールの物理だけを少しず
+らす手続き。
+
+おおざっぱに言うと、{\color{red}変形量子化}をすると小さなスケールでは点
+の概念がなくなって点がぼやけてしまう。\\
+$\Rightarrow$UV発散が無くなる?\\
+$\Rightarrow$\underline{\color{magenta}量子重力理論を作れる?!}\\
+\color{blue}結論を先取りしてしまうと、そんなに甘くはない。でも、量子
+重力理論としてうまく行っている弦理論は、{\color{red}\.{本}\.{質}\.{的}}
+に非可換幾何学的な性質を持っているように見える。
+
+\color{black}予想\\
+\ovalbox{\parbox[t]{16cm}{
+弦理論は\NCG 的な側面な側面を持っているからこそ量子重力理論としてうまく
+いっているんではないか?}}
+
+$\Rightarrow$ 弦理論の\NCG 的な性質を調べることで、弦理論のより深い理解
+を得られるのではないか?
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ {\Large \S3. \NCG を使ってみる。}
+\end{center}
+もし、非可換幾何学的な側面のおかげで弦理論がうまくいっているのならば、場
+の理論に非可換幾何学的な性質を付け加えることで意味のある量子重力理論を作
+れるかもしれない。
+
+{\color{red} 変形量子化}の方法の最も簡単な場合を使って場の理論をやってみ
+よう。\\ 一般の場合(一般のPoisson mfd.)の\DFM\\ $\Rightarrow$ Kontsevich 
+の{\color{red}変形量子化公式}
+\[\color{blue}
+  (f\star g)= fg+\sum_{n=1}^\infty\left(\sum_{\Gamma\in G_n}
+			   \omega_\Gamma B_\Gamma (f,g)\right)\kbar^n
+\]
+変形量子化の最も簡単な場合(どこでも同じ非可換性)\\
+$\Rightarrow$ 積を {\color{red}Moyal積}に入れ替える。
+\[\color{blue}
+ (f\star g)(x)=\E^{\ihalf\theta^{\mu\nu}
+  \partial_\mu^y\partial_\nu^z}f(y)g(z)\Bigg|_{y=z=x}
+\]
+これで最も簡単な場合の非可換場の理論のラグランジアンを書き下すことができ
+る。
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+例えば、非可換$\phi^4$模型のラグランジアン
+\[\color{blue}
+  {\mathrm S}=\int d^4x\,\left(\1half(\partial_\mu\phi)^2+\1halfm^2\phi^2
+   +{1\over4!}g^2\phi\star\phi\star\phi\star\phi\right)
+\]
+%この理論の1-loopの計算で出て来るダイアグラム\\
+%\begin{minipage}[b]{90mm}
+% \begin{center}
+%  \input{phi4-planar.pstex_t}\\
+%  プラナーなダイアグラム
+% \end{center}
+%\end{minipage}
+%\begin{minipage}[b]{90mm}
+% \begin{center}
+%  \input{phi4-nonplanar.pstex_t}\\
+%  ノンプラナーな\\ ダイアグラム
+% \end{center}
+%\end{minipage}\\
+この理論の2点関数を1-loopのオーダーで計算すると、\color{blue}\vspace{-1.5cm}
+\begin{multline*}
+ \Gamma^{(2)}=
+ {g^2\over 48\pi^2}\int^\infty_0 {d\alpha\over \alpha^2}
+ \E^{-\alpha m^2 - {1\over \Lambda^2\alpha}}\\
+ +{g^2\over 96\pi^2}\int^\infty_0 {d\alpha\over \alpha^2}
+ \E^{-\alpha m^2 - {1\over (p\circ p/4 + \Lambda^2)\alpha}}
+\end{multline*}
+\[
+ p\circ p= p_\mu (\theta^2)^{\mu\nu} p_\nu
+\]\color{black}
+で次のような発散が出る。
+\[\color{blue}
+{g^2\over 96\pi^2}
+    \left(2\Lambda^2+\Lambda_{eff}^2
+    -2m^2\ln({\Lambda^2\over m^2})-m^2\ln({\Lambda_{eff}^2\over m^2})\right)
+\]
+ここで
+\[\color{blue}
+ \Lambda_{eff}^2=\frac{1}{1\diagup \Lambda^2 + p\circ p}
+\]
+%こういうものを計算すると、
+%\begin{enumerate}
+% \item {\color{red}UV/IR 混合}$\Rightarrow$\ovalbox{\color{blue}
+%       \parbox{11cm}{紫外のカットオフを導入すると、赤外のカットオフを導
+%       入したことになってしまう。}}
+% \item {\color{red}弦理論との
+%       analogy}$\Rightarrow$\ovalbox{\color{blue}\parbox{9cm}{closed
+%       stringのpropagationに対応するpoleが出る。}}
+%\end{enumerate}
+\color{black}
+ここから、UV/IR混合や、closed stringに対応するモードの出現などの面白い
+性質が出てくる。\\
+しかし結局、発散の問題は解決しない。難しくなるだけ。\\
+$\Rightarrow${\color{blue}結局弦理論しかないのか...}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+ {\Large \S4. 弦理論に現われる\NCG}
+\end{center}
+
+{\color{blue} 普通弦理論で\NCG というと$B$場を入れた場合を考えることが多
+いが、$B$場を入れなくとも弦理論が\NCG 的な性質を持っているという傍証がい
+くつかある。}
+
+{\color{red} Space-Time uncertainty}\\
+\refhep{T.Yoneya hep-th/0004074}
+\[\color{blue}
+ \Delta X\Delta T\gtrsim 1
+\]
+
+普通の不確定性関係$\color{blue}\Delta E\Delta T\gtrsim 1$より、弦理論で
+は弦のエネルギーの大きくなるにつれて弦の拡がりが大きくなる、即ち
+$\color{blue}\Delta E\sim \Delta X$だから導かれる
+
+その他{\color{red} String Field Theory}、{\color{red}Matrix Theory}など
+にも非可換性が表われる。
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+ {\Large \S5. \NCS とD-brane}
+\end{center}
+非可換ソリトンはD-braneと見倣すことができる。以下それを見ていく。
+
+\S5.1 $\theta$無限大の場合の非可換ソリトン\\
+\refhep{Gopakmar,Minwalla,Strominger hep-th/0003160}\\
+弦理論では、$B$場を入れることによってopen stringの理論は非可換性を持つ。\\
+何故ならば、open stringの2点関数
+\[\color{blue}
+  \langle x^i(\tau)x^j(\tau')\rangle=-\ap G^{ij}\log(\tau-\tau')^2
+  +\ihalf\theta^{ij}\epsilon(\tau-\tau')
+\]\color{blue}
+\begin{align*}
+ G^{ij}&=\left({1\over g+2\pi\ap B}\right)^{ij}_{\hbox{対称}}\\
+ \theta^{ij}&=2\pi\ap\left({1\over g
+ +2\pi\ap B}\right)^{ij}_{\hbox{反対称}}
+\end{align*}\color{black}
+から、open stringの理論は非可換性を持つ。
+\[
+ [x^i,x^j]=i\theta^{ij}
+\]
+
+簡単の為に2次元の理論を考える。すると非可換性は
+\[\color{blue}
+ [x,y]=i\theta
+\]
+考えるハミルトニアンは
+\[\color{blue}
+  \Ham={1\over g^2}\int dx\,dy\, \left(\1half(\partial\phi)^2
+				 +V(\phi)\right)
+\]
+
+ここで次のような手続きを取る。\vspace{-1.5cm}
+\begin{enumerate}
+ \item $\theta\rightarrow\infty$の極限を考える。\\
+       $\partial_x$は$\color{blue}i[y,\cdot\,]\diagup \theta$\\
+       $\partial_y$は$\color{blue}-i[x,\cdot\,]\diagup \theta$と書ける。\\
+       $\Rightarrow${\color{blue} 運動項が落ちる。}\vspace{-1.5cm}
+\item $(x,y)\rightarrow(\sqrt{\theta}x,\sqrt{\theta}y)$をrescaleする。
+       \vspace{-1.5cm}
+\item $x,y$から生成消滅演算子をつくる。
+       \[\color{blue}
+	\left\{\begin{array}{l}
+	\anih=\frac{x+iy}{\sqrt{2\theta}} \\
+	\crea=\frac{x-iy}{\sqrt{2\theta}}
+       \end{array}\right.\Rightarrow
+       [\anih , \crea]=1
+       \]
+
+       $\Rightarrow$\ovalbox{\parbox{13cm}{\color{blue}関数をFock空間の
+       演算子に書き直せる。(Weyl写像)\vspace{-5mm}
+       \[
+       \hat{O}_f(\xh,\yh)={1\over (2\pi)}\int d^2k \tilde{f}(k)
+       \E^{-i(k_x\xh+k_y\xh)}
+       \]}}\vspace{-1cm}
+\end{enumerate}
+結局、ハミルトニアンは以下のように書き替わる。
+\[\color{blue}
+ \Ham=2\pi\theta\Tr V(\phi)
+\]
+多項式$V(a)$の極値を与える$a$の値を$a_n$と書けば、もし
+\[\color{blue}
+ \phi_n\star\phi_n=\phi_n
+\]
+を満たすような$\phi_n$があれば、$V(a_n\phi_n)=V(a_n)\phi_n$なので
+$a_n\phi_n$は$\theta\rightarrow\infty$での解になっている。\\
+このような性質(idempotency)を満たす演算子は{\color{red}射影演算子}。例え
+ばFock空間の$\ket{n}$の基底でこんな格好。\color{blue}
+\begin{align*}
+ \phi_n&=\Diag(\overbrace{0,\ldots,0}^{\mbox{n個}},1,0,\ldots)\\
+ &=2(-1)^n \E^{-r^2}L_n(2r^2)\quad\mbox{($L_n$:Laguerre多項式)}
+\end{align*}\color{black}
+更に、$\theta\rightarrow\infty$の時には理論の対称性として$U(\infty)$の対
+称性がある。つまり、以下のユニタリ行列$U$として、以下の変換で不変。
+\[\color{blue} \phi\rightarrow U\phi U^* \] 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+結局このような求め方で得られる解は一般的に
+\[\color{blue} U\left(\sum_{n=0}^\infty a_n\phi_n\right)U^* \]
+のような形をしている。これは一般に$\ket{n}$の基底の行列として見ると
+Hermite行列。\\
+例えば、回転対称なソリトン解$\phi_3$\\[-1.5cm]
+\begin{center}
+ $\phi_3=\begin{pmatrix}
+	  0 & 0 & 0 & 0 &\cdots \\
+	  0 & 0 & 0 & 0 & \cdots \\
+	  0 & 0 & 0 & 0 & \cdots \\
+	  0 & 0 & 0 & 1 & \cdots \\
+	  \vdots & \vdots & \vdots & \vdots & \ddots
+	 \end{pmatrix}=$ \\
+ \includegraphics{GMS33.eps}
+\end{center}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%例2.回転対称でないソリトン解I\\
+%\begin{center}
+% $\begin{pmatrix}
+%   0 & 0 & 1 & \cdots \\
+%   0 & 0 & 0 & \cdots \\
+%   1 & 0 & 0 & \cdots \\
+%   \vdots & \vdots & \vdots & \ddots
+%  \end{pmatrix}=$\\
+% \includegraphics{GMS20.eps}
+%\end{center}
+%
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%例3.回転対称でないソリトン解II\\
+%\begin{center}
+% $\begin{pmatrix}
+%   0 & 0 & 0 & 0 & \cdots \\
+%   0 & 0 & 0 & 0 & \cdots \\
+%   0 & 0 & 0 & i & \cdots \\
+%   0 & 0 & -i & 0 & \cdots \\
+%   \vdots & \vdots & \vdots & \vdots &\ddots
+%  \end{pmatrix}=$\\
+% \includegraphics{GMS23I.eps}
+%\end{center}
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\S.5.2 $\theta$有限の場合
+%
+%5一般に運動項の存在すると、$\der_x=i[x,\cdot\,]\diagup\theta$は$U(\infty)$の対称性を壊してしまう。\\
+%$\Rightarrow U(1)$ゲージ場を導入すると$U(\infty)$が復活。
+%
+%$\color{blue}x,y$がもはや交換しないので、$\color{blue}x,y$で演算子形式で
+%書いたハミルトニアンは、
+%\[\color{blue}
+%  \Ham=2\pi\Tr\left(\1half([\aniC,\creC]+1)^2
+%		 +[\aniC,\phi][\creC,\phi]
+%		 +\theta V(\phi)\right)
+%\]
+%\[\color{blue}
+% \creC\equiv \crea+i\theta^{\1half}A,\quad
+%  \aniC\equiv \anih-i\theta^{\1half}\Ab\quad\mbox{(共変微分)}
+%\]
+%ここで、$U(\infty)$の対称性があると、{\color{red} Solution generating
+%technique}を使うことができる。つまり以下のような変換をすると、
+%\underline{\color{blue} 新しい解を構成できる。}
+%\[\color{blue}
+% C\rightarrow SC\Sd,\quad\phi\rightarrow S\phi\Sd
+%\]
+%ここで、$S$は{\color{red} isometry}つまり、\ovalbox{\color{blue}$\Sd
+%S=1$}を満たす。\\
+%例えば$S$がshift operator \ovalbox{\color{blue}$S\equiv
+%\sum\limits_{k=0}^\infty \ket{k+1}\bra{k}$}の時
+%\[\color{blue}
+% \left\{\begin{array}{l}
+%  \phi=\phi_*\\
+%  A=0\\
+%  E=0
+% \end{array}\right.\mbox{\shortstack[c]{$S^n$\\ $\Rightarrow$}}
+% \left\{\begin{array}{l}
+%  \phi=\phi_*(1-\sum\limits^{n-1}_{k=0}\ket{k}\bra{k}) \\
+%  \aniC=S^n\crea\Sd^n,\,\creC=S^n\anih\Sd^n \\
+%  E=2\pi n\left(\frac{1}{2\theta}+\theta V(0)\right)
+% \end{array}\right.
+%\]
+%
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\S 5.2 \NCS のD-braneへの同定\\
+\refhep{Harvey,Kraus,Larsen,Martinec hep-th/0005031}
+\begin{center}
+ タキオン場のポテンシャル
+ \includegraphics{tachyon-potential.eps}
+\end{center}\vspace{-1cm}
+Senの仮説によると、不安定なタキオンのある真空とタキオンの無い真空とのタ
+キオンポテンシャルの差はbraneのテンションに一致する。\\
+タキオン場で\NCS を構成すると,\\
+\underline{\color{blue}そのテンションはD-braneと一致する。}\\
+何故ならば、タキオン場の有効作用は、
+\[\color{blue}
+  S=-{T_{25}g_s\over G_s}\int d^{26}\, \sqrt{G}\left(
+  \1half f(T)G^{\mu\nu}\partial_\mu T \partial_\nu T-V(T) \right)
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+このうちの空間2次元方向が非可換であるときその方向の関数を演算子形
+式に書き直すと、
+\[\color{blue}
+  \Ham ={2\pi T_{25}g_s\theta\over G_s}\int d^{24}x\, \sqrt{G}
+  \sum_{n=0}^\infty V(a_n) \hspace{1cm}(a_n\in\{0,T_\ast\})
+\]
+ここで、$a_0=T_\ast,a_n=0(n\geq 1)$なる解をとれば
+\[\color{blue}
+ \Ham=(2\pi)^2\ap T_{25} \int d^{24}x\, \sqrt{g}=T_{23}\int d^{24}x\sqrt{g}
+\]
+で\underline{\color{blue}D23-braneのテンションがexactに出てくる。}
+
+さらに、\NCS 解のまわりのゲージ場のfluctuationを考えると、タキオン場とゲー
+ジ場のカップリングの仕方は\underline{\color{blue} D-braneのそれと一致す
+る。}
+
+以上の事実から次のことが言えそう。\\
+\ovalbox{\parbox{16cm}{\color{blue} \NCS は実はD-braneを表
+わしている。}}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\S 5.3 D-braneチャージと\Kth
+
+非可換ソリトンがD-braneを表わしている。\\
+$\Rightarrow$\ovalbox{\parbox{14cm}{\color{blue}D-braneのチャージも\NCS 
+の言葉で書けるはず。}}
+
+D-braneのチャージはゲージ場のトポロジカルな配位で決まっていた。D-braneと
+antiD-braneがそれぞれチャージを持ち得るので、系の持ち得るD-braneのチャー
+ジは{\color{blue}$(E,F)$}というゲージ場のペアで決まる。更に、同じゲージ
+場の配位を持つD-braneとantiD-braneの対消滅を考えると、
+\[\color{blue}
+(E,F)\sim(E+G,F+G)
+\]
+という同値関係がある。これは、まさにトポロジカル\Kth の定義!!\\
+$\Rightarrow$\ovalbox{\parbox{14cm}{\color{blue}D-braneのチャージは\Kth 
+によって分類される。}}\\
+例えば、2次元のEuclid空間$\Real^2$を考えると、それをコンパクト化したもの
+の$\Kt$群は$\Intg$である。即ち、D$p$-braneが持ち得るD$(p-2)$-braneチャー
+ジは
+\[\color{blue}
+ (\mbox{D-braneの枚数})-(\mbox{antiD-braneの枚数})
+\]
+で$\Intg$となる。
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+その一方で、
+\[\color{blue}
+ \mbox{非可換ソリトン}\Leftrightarrow\mbox{Fock空間の射影演算子}
+\]
+という対応があったが、$\Cst$環の\Kth はまさに{\color{blue}射影演算子の同
+値類(この場合は射影演算子のランクで分類される。)によって定義されている}。
+
+非可換幾何では多様体の上の関数環によって$\Cst$環の\Kth を構成することが
+できる。非可換2次元の関数環はFock空間のオペレーターの成す環$\MatK$ であ
+るが、この$\Cst$環の$K$群を計算すると、
+\[\color{blue}
+ K(\MatK)=\Intg
+\]
+で\underline{\color{blue} トポロジカル\Kth の計算結果と一致する。}
+
+\ovalbox{\parbox{16cm}{\color{blue}つまり、\NCS の言葉でトポロジカルな量
+であるD$p$-braneのD$(p-2)$-braneのチャージを説明することができた。}}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+  {\Large \S6. 結論}
+\end{center}
+
+\color{black} ナイーブな考察によれば量子重力理論を構成する為には\NCG は
+強力な手法を提供しているようにように見える。\\ \color{blue} しかし、最も
+単純な方法として、場の理論を\DFM するやり方では、色々と面白い現象が出て
+くるが意味のある量子重力理論を作るという観点から見ると、どうも理論が難し
+くなるだけのように見える。\\ \color{black} 一方、弦理論は量子重力理論と
+してうまくいっているが、弦理論は\NCG 的な側面を{\color{red}\.{本}\.{質}
+\.{的}} に含んでいることを示唆する事実がいくつか存在する。\\
+\color{blue} 特に、\NCS をD-braneと同定することができ、そのD-braneチャー
+ジを\NCG で重要な概念である\Kth で計算することができたことは、\NCG が弦
+理論の非摂動論的な定式化を研究する武器になり得ることを示唆するものである。
+\\ \color{black}
+\end{document}

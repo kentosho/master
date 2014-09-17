@@ -1,0 +1,270 @@
+%!
+%%BoundingBox: 70 660 181 789
+%%Title: plannerA
+%%CreationDate: Wed Nov 22 04:21:58 2000
+%%Creator: Tgif-3.0J-p13 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 10 dict def
+tgifdict begin
+
+/tgifellipsedict 6 dict def
+tgifellipsedict /mtrx matrix put
+
+/tgifellipse
+ { tgifellipsedict begin
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 0 360 arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarrowtipdict 8 dict def
+tgifarrowtipdict /mtrx matrix put
+
+/tgifarrowtip
+ { tgifarrowtipdict begin
+      /dy exch def
+      /dx exch def
+      /h exch def
+      /w exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      dy dx atan rotate
+      0 0 moveto
+      w neg h lineto
+      w neg h neg lineto
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarcdict 8 dict def
+tgifarcdict /mtrx matrix put
+
+/tgifarcn
+ { tgifarcdict begin
+      /endangle exch def
+      /startangle exch def
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 startangle endangle arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifarc
+ { tgifarcdict begin
+      /endangle exch def
+      /startangle exch def
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 startangle endangle arcn
+      savematrix setmatrix
+   end
+ } def
+
+/tgifcentertext { dup stringwidth pop 2 div neg 0 rmoveto } def
+
+end
+
+%%PageBoundingBox: 70 660 181 789
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% OVAL
+0 setgray
+gsave
+   gsave
+      newpath 224 224 96 96 tgifellipse
+      2 setlinewidth
+      stroke
+   grestore
+grestore
+
+% ARC
+0 setgray
+gsave
+   gsave
+      newpath
+         224 224 88 88 -5 -174 tgifarc
+      2 setlinewidth
+      stroke
+   grestore
+grestore
+
+% ARC
+0 setgray
+gsave
+   gsave
+      newpath
+         224 224 88 88 0 180 tgifarcn
+      2 setlinewidth
+      stroke
+   grestore
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      136 216 moveto
+      312 216 lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      136 224 moveto
+      312 224 lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      208 208 moveto
+      0 32 atan dup cos 8.000 mul 240 exch sub
+      exch sin 8.000 mul 208 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      240 208 8.000 3.000 32 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      240 208 8.000 3.000 32 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      240 232 moveto
+      0 -32 atan dup cos 8.000 mul 208 exch sub
+      exch sin 8.000 mul 232 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      208 232 8.000 3.000 -32 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      208 232 8.000 3.000 -32 0 tgifarrowtip
+   closepath fill
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      240 120 moveto
+      0 -32 atan dup cos 8.000 mul 208 exch sub
+      exch sin 8.000 mul 120 exch sub lineto
+   tgiforigctm setmatrix
+   1 setlinewidth
+   stroke
+grestore
+gsave
+   tgiforigctm setmatrix
+   newpath
+      208 120 8.000 3.000 -32 0 tgifarrowtip
+   1 setgray closepath fill
+   0 setgray
+   newpath
+      208 120 8.000 3.000 -32 0 tgifarrowtip
+   closepath fill
+grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      224 112 moveto (l) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      224 200 moveto (l) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      224 256 moveto (l) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [8 0 0 -8 0 0] makefont setfont
+   gsave
+      232 112 moveto (1) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [8 0 0 -8 0 0] makefont setfont
+   gsave
+      232 200 moveto (2) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [8 0 0 -8 0 0] makefont setfont
+   gsave
+      232 256 moveto (3) tgifcentertext show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Wed Nov 22 04:21:58 2000

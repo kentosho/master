@@ -1,0 +1,27 @@
+%#!platex
+\documentclass[11pt,a4j]{jbook}
+
+\title{修士論文 \\
+  \vspace{1cm}
+  {\Huge 弦理論の非可換幾何学的側面}\\
+  \vspace{7cm}}
+\author{ 市川 \hspace{3mm}憲人
+   \footnote{kent@hep-th.phys.s.u-tokyo.ac.jp}
+   (学籍番号96036)\\
+   \large 東京大学理学系研究科素粒子理論研究室
+   \vspace{-2mm} \\
+   \large 東京都文京区本郷 3-5-1 \\
+   \vspace{2cm}}
+\date{}
+
+\input{predef}
+\begin{document}
+
+\begin{align}
+ a_{n+1}-a_n\simeq 2\theta\int^{a_n}_{a_0}da\, V'(x)&=2\theta(V(a_n)-V(a_0))
+  \nonumber\\
+ &\xrightarrow{n\rightarrow\infty}-2\theta V(a_0)
+\end{align}
+\typeout{=== Region from (point) to (mark) ===}
+
+\end{document}

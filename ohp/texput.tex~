@@ -1,0 +1,119 @@
+%#!platex master-ohp.tex
+\documentclass{slides}
+\usepackage{graphics}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{enumerate}
+
+\def\RNC{{\color{red} 非可換幾何学}}
+\def\kbar{{\mathchar'26\mkern-9muk}}
+\def\E{{\mathrm{e}}}
+\def\vk{\vec{k}}
+\def\vp{\vec{p}}
+\def\ihalf{\frac{i}{2}}
+\def\1half{\frac{1}{2}}
+\baselineskip=5mm
+\rmfamily
+\mdseries
+
+\begin{document}
+
+
+  \item 微分形式
+  \item 接続と曲率
+  \item 指数定理
+ \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{8cm}
+ \begin{center}
+ \RNC には一般にないもの
+ \end{center} 
+ \color{magenta}
+ \begin{itemize}
+  \item 点
+  \item メトリック
+  \item ラプラシアン
+ \end{itemize}
+\end{minipage}
+
+\begin{center}
+この定義は物理としては少し抽象的すぎる気が...
+\end{center}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ \Large \S2. 何故非\RNC なのか?
+\end{center}
+
+もう少し具体的に非可換幾何学を定義する方法はないものか?
+\begin{center}
+ $\Rightarrow$\Ovalbox{\Large \color{red} 変形量子化}
+\end{center}
+
+結論から言うと、変形量子化をすると点の概念がなくなって点がぼやけてしまう。
+\\
+$\Rightarrow$UV発散が無くなる?\\
+$\Rightarrow$量子重力理論を作れる?!
+
+\color{blue}結論を先取りしてしまうと、そんなに甘くはない。でも、量子
+重力理論としてうまく行っている弦理論は、{\color{red}\.{本}\.{質}\.{的}}
+に非可換幾何学的な性質を持っているように見える。
+
+\color{black}予想\\
+\ovalbox{\parbox[t]{16cm}{
+弦理論は\RNC 的な側面な側面を持っているからこそ量子重力理論としてうまく
+いっているんではないか?}}
+
+$\Rightarrow$ \RNC 的な性質を調べることで、弦理論の非摂動論的な定式化に
+何らかの情報を得ることができるのではないか?
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ {\Large \S3.非可換幾何学を使ってみる。}
+\end{center}
+もし、非可換幾何学的な側面のおかげで弦理論がうまくいっているのならば、場
+の理論に非可換幾何学的な性質を付け加えることでconsistentな量子重力理論を
+作れるかも。
+
+{\color{red} 変形量子化}の方法の最も簡単を使って場の理論をやってみよう。\\
+一般の場合の変形量子化\\ $\Rightarrow$ Kontsevich の変形量子化公式
+\[
+  (f\star g)= fg+\sum_{n=1}\left(\sum_{\Gamma\in G_n}
+			   \omega_\Gamma B_\Gamma (f,g)\right)\kbar^n
+\]
+変形量子化の最も簡単な場合(どこでも同じ非可換性)\\
+$\Rightarrow$ 積を Moyal積に入れ替える。
+\[ (f\star g)(x)=\E^{\ihalf\theta^{\mu\nu}
+  \partial_\mu^y\partial_\nu^z}f(y)g(z)\Bigg|_{y=z=x}
+\]
+これで非可換場の理論のラグランジアンを書き下すことができる。
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+例えば、非可換$\phi^4$模型のラグランジアン
+\[
+  {\mathrm S}=\int d^4x\,\left(\1half(\partial_\mu\phi)^2+\1halfm^2\phi^2
+   +{1\over4!}g^2\phi\star\phi\star\phi\star\phi\right)
+\]
+
+この理論の1-loopの計算で出て来るダイアグラム
+\begin{minipage}[b]{90mm}
+ \input{phi4-planar.pstex_t}\\
+ プラナーなダイアグラム
+ \end{minipage}
+\begin{minipage}[b]{90mm}
+ \input{phi4-nonplanar.pstex_t}\\
+ ノンプラナーな\\ ダイアグラム
+\end{minipage}
+
+こういうものを計算すると、
+\begin{enumerate}
+ \item UV/IR 混合$\Rightarrow$\parbox{10cm}{紫外のカットオフを導入すると、赤外
+       のカットオフを導入したことになってしまう。}
+ \item 弦理論とのanalogy$\Rightarrow$\parbox{10cm}{open stringの
+       propagationに対応するpoleが出る。\typeout{=== Region from (point) to (mark) ===}
+
+\end{document}

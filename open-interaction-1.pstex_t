@@ -1,0 +1,18 @@
+\begin{picture}(0,0)%
+\includegraphics{open-interaction-1.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3038,1193)(91,-515)
+\put(1510,483){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}\special{ps: gsave 0 0 0 setrgbcolor}$*$\special{ps: grestore}}}}
+\put(721,344){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}\special{ps: gsave 0 0 0 setrgbcolor}$U$\special{ps: grestore}}}}
+\put(2206,479){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}\special{ps: gsave 0 0 0 setrgbcolor}$V$\special{ps: grestore}}}}
+\put(1377,-271){\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}\special{ps: gsave 0 0 0 setrgbcolor}$U*V$\special{ps: grestore}}}}
+\put(1554,306){\rotatebox{270.0}{\makebox(0,0)[lb]{\smash{\SetFigFont{17}{20.4}{\rmdefault}{\mddefault}{\updefault}\special{ps: gsave 0 0 0 setrgbcolor}$\equiv$\special{ps: grestore}}}}}
+\end{picture}

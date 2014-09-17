@@ -1,0 +1,114 @@
+%!
+%%BoundingBox: 34 696 145 821
+%%Title: plannerB
+%%CreationDate: Wed Nov 22 04:27:21 2000
+%%Creator: Tgif-3.0J-p13 by William Chia-Wei Cheng (william@cs.UCLA.edu)
+
+/tgifdict 5 dict def
+tgifdict begin
+
+/tgifellipsedict 6 dict def
+tgifellipsedict /mtrx matrix put
+
+/tgifellipse
+ { tgifellipsedict begin
+      /yrad exch def
+      /xrad exch def
+      /y exch def
+      /x exch def
+      /savematrix mtrx currentmatrix def
+      x y translate
+      xrad yrad scale
+      0 0 1 0 360 arc
+      savematrix setmatrix
+   end
+ } def
+
+/tgifcentertext { dup stringwidth pop 2 div neg 0 rmoveto } def
+
+end
+
+%%PageBoundingBox: 34 696 145 821
+tgifdict begin
+/tgifsavedpage save def
+
+1 setmiterlimit
+1 setlinewidth
+
+0 setgray
+
+72 0 mul 72 11.70 mul translate
+72 128 div 100.000 mul 100 div dup neg scale
+
+gsave
+
+/tgiforigctm matrix currentmatrix def
+
+% OVAL
+0 setgray
+gsave
+   gsave
+      newpath 160 160 96 96 tgifellipse
+      2 setlinewidth
+      stroke
+   grestore
+grestore
+
+% POLY/OPEN-SPLINE
+0 setgray
+gsave
+   newpath
+      64 160 moveto
+      256 160 lineto
+   tgiforigctm setmatrix
+   2 setlinewidth
+   stroke
+   1 setlinewidth
+grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      160 152 moveto (k) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      160 56 moveto (k) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [17 0 0 -17 0 0] makefont setfont
+   gsave
+      160 248 moveto (k) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [8 0 0 -8 0 0] makefont setfont
+   gsave
+      168 56 moveto (1) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [8 0 0 -8 0 0] makefont setfont
+   gsave
+      168 152 moveto (2) tgifcentertext show
+   grestore
+
+% TEXT
+0 setgray
+/NewCenturySchlbk-Roman findfont [8 0 0 -8 0 0] makefont setfont
+   gsave
+      168 248 moveto (3) tgifcentertext show
+   grestore
+
+grestore
+tgifsavedpage restore
+end
+%MatchingCreationDate: Wed Nov 22 04:27:21 2000

@@ -1,0 +1,205 @@
+%#!platex master.tex
+
+String Field Theoryと非可換幾何学との関係は早くから指摘されてきた
+\cite{NCGandSFT}。この節ではString Field Theoryの計算方法の詳細には触れ
+ずにその非可換幾何学的な側面だけに絞って説明する。String Field Theoryの
+計算方法の詳細については、大森の修士論文\cite{OhmoriMthesis}を参照。
+
+\subsection{Open String Field Theoryのラグランジアン}
+
+String Field Theoryを考えるに当って、必要なものを考えるとString Fieldの
+成す代数、弦同士の相互作用、BRST変換(BRST形式で考えなければならない理由
+は後に説明する。)、空間上の積分などが考え付く。そこで、まず抽象的に
+$\Intg_2$gradedで一般には非可換な代数$\AlgB$とその上の積$*$ そして、その
+上のoddな微分$Q$と積分$\int$を考える。$A,B\in\AlgB$としてそれらのgradeを
+$a,b\in \{0,1\}$と書くことにする。この時、この代数は、以下のような関係式
+を満たしていると仮定する。
+\begin{align}
+ \mathrm{grade}(A*B)&\equiv a+b\quad(\mathrm{mod}2) \\
+ \mathrm{grade}(Q(A))&\equiv a+1\quad(\mathrm{mod}2) \\
+ Q(Q(A))&=0 \\
+ Q(A*B)&=Q(A)*B+(-1)^aQ(B) \\
+ \int A*B&=(-1)^{ab} \int B*A \\
+ \int Q(A)&=0
+\end{align}
+例えば$\AlgB$を微分形式$Q,*,\int$をそれぞれ外微分\ten wedge積\ten 積分と
+すれば上の性質を満たす。ここで、積$*$はwedge積$\wedge$の一般化でwedge積
+と行列の積の組み合せになっているかもしれないということに言及しておく。
+
+更に、$\AlgB_0\subset\AlgB$という$*$積によって閉じた部分代数があるとする。
+これは、0-形式の一般化である。$A_i,B_j,C_k\in\AlgB_0$について$n$-形式を
+\begin{equation}
+ \sum_{i,j,k} A_i*Q(B_j)*\cdots*Q(C_j)
+\end{equation}
+によって定義する。
+
+これらの定義によってゲージ理論の一般化を定義することができる。すなわち、
+1-形式$A$の$\epsilon\in\AlgB_0$をパラメータとしてゲージ変換を
+\begin{equation}
+ \delta_\epsilon A\equiv Q(\epsilon)+A*\epsilon-\epsilon *A
+\end{equation}
+と定義し、field strengthを
+\begin{equation}
+ F\equiv Q(A)+A*A
+\end{equation}
+\begin{equation}
+ \delta_\epsilon F=F*\epsilon -\epsilon *F
+\end{equation}
+と定義する。ここで、field strength$F$はBianchi等式
+\begin{equation}
+ Q(F)+A*F-F*A=0
+\end{equation}
+を満たす。このゲージ理論のラグランジアンとして適当なラグランジアンは、現
+在手元にある積がwedge積に対応するものしかないので、Chern-Simons型が適当
+である。即ち、
+\begin{equation}
+ \label{chern-simons-action}
+ I=\int(A*Q(A)+\frac{2}{3}A*A*A)
+\end{equation}
+このラグランジアンから求まる運動方程式は、
+\begin{equation}
+ \label{chern-simons-eom}
+ F=0
+\end{equation}
+となる。もし、$A$をただのゲージ場として見た場合この式は非常に自明すぎて
+理論としての面白みの欠けるものとなる。しかし、$A$を$a\xrightarrow{A}A*a$ 
+なる演算子だと思うことにすれば、(\ref{chern-simons-eom})は$a$への作用を
+考えれば、
+\begin{align}
+ (Q(A)+A*A)a&=Q(Q(a))+Q(A*a)+A*Q(a)+A*A*a \nonumber \\
+ &=(Q+A)^2a=0
+\end{align}
+となる。
+
+抽象的な代数の定義をする前に述べたように、弦理論の文脈では$Q$はBRST変換
+として解釈され、また定義のような性質を満たす$Q$の候補はBRST変換しかない
+ので、$(Q+A)$は新たな(1+1)次元の理論の羃零なBRST演算子と解釈される。
+
+\subsection{String fieldのassociativity}
+
+String Field Theoryを構成する際にString Field の代数が結合律を満たすかど
+うか、即ち
+\begin{equation}
+ U*(V*W)=(U*V)*W
+\end{equation}
+が成立するかどうかは、微妙な問題である。実際、open stringの成す代数は結
+合律を満たすが、closed stringの成す代数が結合律を満たさない。まずはその
+ことを説明していく。
+
+\begin{figure}[ht]
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{open-interaction-1.pstex_t}
+   \caption{単純なopen stringの相互作用}
+   \label{open-interaction-1}
+  \end{center} 
+ \end{minipage}
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{open-associativity.pstex_t}
+   \caption{単純なopen stringの相互作用の結合性}
+   \label{open-interaction-associativity}
+  \end{center} 
+ \end{minipage}
+\end{figure}
+open stringの場の相互作用としてもっとも単純なのは、一方の弦の左端ともう
+一方の弦の右端をくっつける、図\ref{open-interaction-1}のような相互作用を
+考えることである。この相互作用で定義される積は明らかに非可換であるが、結
+合律は満たしている。
+
+\begin{figure}[ht]
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{closed-interaction.pstex_t}
+   \caption{closed stringの相互作用}
+   \label{closed-interaction}
+  \end{center} 
+ \end{minipage}
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{closed-associativity.pstex_t}
+   \caption{closed stringの相互作用の結合性}
+   \label{closed-interaction-associativity}
+  \end{center} 
+ \end{minipage}
+\end{figure}
+一方、closed stringの場合は、相互作用としては、弦の1点をくっつけるような
+図\ref{closed-interaction}のような相互作用を考えるのが自然である。この相
+互作用による積はopen stringの時のように左右の区別が無いので可換な積になっ
+ている。しかし、図\ref{closed-interaction-associativity}のような3つのopen
+stringの相互作用を考えると、$U*V$はお互いに交わっていないので$0$になるか
+ら、$0=(U*V)*W\neq U*(V*W)$であり、積の結合律が壊れてしまっている。
+
+\subsection{open stringの相互作用の修正}
+
+\begin{figure}[ht]
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{open-reparametrization-1.pstex_t}
+   \caption{(U*V)を先にやった場合}
+   \label{open-repara-1}
+  \end{center} 
+ \end{minipage}
+ \begin{minipage}[b]{75mm}
+  \begin{center}
+   \input{open-reparametrization-2.pstex_t}
+   \caption{(V*W)を先にやった場合}
+   \label{open-repara-2}
+  \end{center} 
+ \end{minipage}
+\end{figure}
+前の小節で、closed stringの図\ref{open-interaction-1}のような相互作用は
+結合律を満たすといったが、実は微妙な点がある。それは、この結合性がworld
+sheetの座標の再定義に依っているという点である。つまり、図
+\ref{open-repara-1}と図\ref{open-repara-2}で示されているように、積を行な
+う順序に依って、弦の中の座標が異なっているという点である。
+
+しかし、弦の座標の再定義の自由度を残したままstring field theoryを構成す
+ることは非常に難しいことが知られている。座標の再定義の自由度を残す代わり
+にBRST形式にのっとってBRSTチャージの保存を課したほうが楽である。さらに、
+別の問題として、図\ref{open-interaction-1}のような相互作用を考えた時にう
+まく積分を定義できない(無理矢理左端と右端をくっつけて積分するとそれは
+closed stringに値を取ってしまう。)という問題がある。
+
+\begin{figure}[ht]
+ \begin{center}
+  \input{open-interaction-2.pstex_t}
+  \caption{修正したopen stringの相互作用}
+  \label{open-interaction-2}
+ \end{center}
+\end{figure}
+この二つの問題を解決するためにopen stringの相互作用の仕方に変更を加える。
+その為に、まず、open string $S$を半分($\sigma=\frac{\pi}{2}$)から左と右
+$(U_L,V_R)$に分ける。修正されたopen stringの相互作用は
+\begin{equation}
+ \label{witten-star}
+ (U_L,U_R)*(V_L,V_R)\equiv (U_L,V_R)\delta(U_R-V_L)
+\end{equation}
+という形(図\ref{open-interaction-2})をしている。これは、弦の座標の再定義
+を必要としない為にBRST形式でゲージ固定をしたまま相互作用を計算できるので
+非常に好都合である。また、積分は
+\begin{equation}
+ \int U*V=\delta(U_R-V_L)\delta(U_L-V_R)
+\end{equation}
+と定義することができる。このような、open stringの相互作用で定義された積
+をこの節の初めに抽象的に定義した$*$と新たに定義して、
+(\ref{chern-simons-action})の作用の下に構成された理論がWitten型のOpen
+String Field Theoryである。
+
+\subsection{WittenのOpen String Field Theoryの非可換性}
+
+\begin{figure}[ht]
+ \begin{center}
+  \input{SFT-NC.pstex_t}
+  \caption{WittenのOpen String Field Theoryの非可換性}
+  \label{SFT-NC}
+ \end{center}
+\end{figure}
+最後に、WittenのOpen String Field Theoryが持つ非可換性について説明する。
+この節の最初の抽象的な構成から、string fieldの成す代数は一般に非可換なも
+のであったが、実際図\ref{SFT-NC}から直感的に分かるようにWittenのOpen
+String Field Theoryでstring fieldの成す代数は非可換になっている。即ち、
+\begin{equation}
+ (U_L,V_R)\delta(U_R-V_L)\neq(V_L,U_R)\delta(V_R-U_L)
+\end{equation}
+となっている。
