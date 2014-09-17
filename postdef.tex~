@@ -1,3 +1,0 @@
-%#!platex master.tex
-\newtheorem{The}{定理}[section]
-\newtheorem{Def}[The]{定義}
